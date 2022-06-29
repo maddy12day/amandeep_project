@@ -3,7 +3,7 @@ import Footer from "./footer";
 import Header from "./header";
 const Layout = ({ component }) => {
   return (
-    <Container fluid className="h-100">
+    <Container fluid className="h-100 layout-bg" >
       <Row className="h-100">
         <Col md={12} style={{ height: "200px" }}>
           <Header />

@@ -1,2 +1,44 @@
 @import "~bootstrap/scss/bootstrap";
 
+
+.button{
+    border-radius: 13em;
+    background: linear-gradient(85.56deg, #A046E0 6.02%, #F4E900 161.61%);
+    border: black;
+    margin-left : 1.5em;
+    margin-right : 1.5em;
+}
+
+.footer-container{
+    margin-left : 8em;
+    text-align: center;
+}
+
+.link{
+    margin-left : 1.5em;
+    margin-right : 1.5em;
+}
+
+table {
+    margin-right: 6em;
+    margin-left: 0.8em;
+    width: 6rem;
+  }
+ 
+//   th,
+//   td {
+//     // border: 1px solid white;
+//     // width: 2rem;
+//     // overflow: hidden;
+//     // height: 1.5rem;
+//   }
+
+.layout-bg{
+    background-image: url("./app/assets/images/bg.webp");
+    // background-attachment: fixed;
+    background-size: cover;
+}
+
+.navbarf{
+    bottom: 0;
+}
