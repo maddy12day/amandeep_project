@@ -8,6 +8,7 @@
   .profile-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     width: 716px;
     height: 736px;
     background: linear-gradient(
@@ -17,6 +18,12 @@
       #000000 100%
     );
     margin: auto;
+    .profile-icon {
+      width: 28px;
+      height: 20px;
+      cursor: pointer;
+    }
+    
     .profile-heading {
       font-family: "Montserrat";
       font-style: normal;
@@ -31,9 +38,12 @@
       height: 76.44px;
       margin: auto;
       text-align: center;
-      padding-top: 32px;
-      padding-bottom: 0px;
+      // padding-top: 32px;
+      // padding-bottom: 0px;
       margin-bottom: 10px;
+      h1 {
+        margin-top: 7%;
+      }
     }
     .progress {
       display: flex;
@@ -42,6 +52,7 @@
       background: transparent;
       // margin-top: -50%;
       // padding-bottom: 20px;
+      margin-bottom: 5%;
       .progress1 {
         width: 145.52px;
         height: 4px;
@@ -91,9 +102,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      // margin-top: 18%;
-      padding-bottom: 32%;
-      padding-top: 80px;
+      margin-top: 17%;
+      margin-bottom: 20%;
       button {
         width: 223.94px;
         height: 58px;
@@ -112,38 +122,38 @@
   }
 }
 
-// Second step 
-.secondstep-input{
+// Second step
+.secondstep-input {
   margin-top: 70px;
 }
 
 // Third step
-.thirdstep-input{
-  margin-top: 50px;
-}
-.thirdstep-select{
-  margin-top: 50px;
+.thirdstep-container {
+  margin-top: 2%;
+  .thirdstep-select {
+    margin-top: 50px;
+  }
+  .thirdstep-paragraph p {
+    text-align: center;
+    margin-left: 37%;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #424242;
+    margin-top: 10px;
+  }
+  .thirdstep-paragraph-2 p {
+    text-align: center;
+    margin-left: 58%;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #424242;
+    margin-top: 10px;
+  }
 }
 
-.thirdstep-paragraph p{
- text-align: center;
- margin-left: 37%;
- font-family: 'Nunito';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 22px;
-color: #424242;
-margin-top: 10px;
-}
-.thirdstep-paragraph-2 p{
-  text-align: center;
-  margin-left: 58%;
-  font-family: 'Nunito';
- font-style: normal;
- font-weight: 500;
- font-size: 16px;
- line-height: 22px;
- color: #424242;
- margin-top: 10px;
- }

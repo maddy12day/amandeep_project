@@ -2,6 +2,8 @@ import { useState } from "react";
 import FirstStep from "./firststep";
 import SecondStep from "./secondstep";
 import ThirdStep from "./thirdstep";
+import Arrow from "../../assets/images/arrow.png"
+import { Image } from "react-bootstrap";
 const Profile = () => {
   const [stepCount,setStepCount]=useState(1);
 
@@ -16,7 +18,10 @@ const Profile = () => {
     <>
       <div className="con">
         <div className="profile-container">
-          <div className="profile-heading">
+        <div className="profile-icon" onClick={()=>setStepCount(stepCount-1)}>
+        {stepCount === 1 ? " " : <Image src={Arrow}/>}
+        </div>  
+          <div className="profile-heading"> 
             <h1>Verify yourself</h1>
           </div>
           <div className="progress">
