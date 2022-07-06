@@ -20,7 +20,8 @@ const Profile = () => {
         <div className="profile-container">
         <div className="profile-icon" onClick={()=>setStepCount(stepCount-1)}>
         {stepCount === 1 ? " " : <Image src={Arrow}/>}
-        </div>  
+        </div> 
+        <div className="profile-header">
           <div className="profile-heading"> 
             <h1>Verify yourself</h1>
           </div>
@@ -29,12 +30,13 @@ const Profile = () => {
             <span className={`progress1 ${checkProgress(2)}`}></span>
             <span className={`progress1 ${checkProgress(3)}`}></span>
           </div>
+          </div>
           <div>
-          {stepCount === 1? <FirstStep/>: stepCount === 2 ? <SecondStep/>: stepCount === 3 ? <ThirdStep/>:""}
+          {stepCount === 1? <FirstStep stepCount={(e)=>setStepCount(e)}/>: stepCount === 2 ? <SecondStep/>: stepCount === 3 ? <ThirdStep/>:""}
           </div>
-          <div className="profile-btn">
-            <button type="submit" onClick={()=> setStepCount(stepCount+1)}>Continue</button>
-          </div>
+          {/* <div className="profile-btn">
+            <button type="submit" onClick={()=>stepCount === 3 ? null : setStepCount(stepCount+1)}>Continue</button>
+          </div> */}
         </div>
       </div>
     </>

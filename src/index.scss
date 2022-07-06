@@ -22,8 +22,12 @@
       width: 28px;
       height: 20px;
       cursor: pointer;
+      margin-top: 6px;
+      margin-left: 9px;
     }
-    
+    .profile-header{
+      margin-top:28px ;
+      margin-bottom: 15px;
     .profile-heading {
       font-family: "Montserrat";
       font-style: normal;
@@ -42,9 +46,10 @@
       // padding-bottom: 0px;
       margin-bottom: 10px;
       h1 {
-        margin-top: 7%;
+        margin-top: 6px;
       }
     }
+  }
     .progress {
       display: flex;
       justify-content: center;
@@ -52,7 +57,7 @@
       background: transparent;
       // margin-top: -50%;
       // padding-bottom: 20px;
-      margin-bottom: 5%;
+      margin-bottom: 4%;
       .progress1 {
         width: 145.52px;
         height: 4px;
@@ -102,8 +107,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 17%;
+      margin-top: 14%;
       margin-bottom: 20%;
+      margin-left: 39%;
       button {
         width: 223.94px;
         height: 58px;
@@ -129,7 +135,7 @@
 
 // Third step
 .thirdstep-container {
-  margin-top: 2%;
+  margin-top: 5%;
   .thirdstep-select {
     margin-top: 50px;
   }
@@ -395,5 +401,4 @@ ul {
     background-image: url("./app/assets/images/bg.webp");
     background-size: cover;
 }
-
 
