@@ -1,8 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/layout";
-import MobileVerification from "./views/Onboarding/MobileVerification";
-import Onboarding from "./views/Onboarding/onboarding";
 import Signup from "./views/Onboarding/Signup";
+import Profile from "./views/Verify/profile";
 
 function App() {
   return (
@@ -13,7 +12,8 @@ function App() {
           //   <Route path="/" element={<Signup />} />
           // </Routes>
           <Routes>
-            <Route path="/" element={<MobileVerification />} />
+            <Route path="/" element={<Signup />} />
+            <Route path="/verify" element={<Profile />} />
           </Routes>
         }
       />

@@ -1,4 +1,161 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./app/assets/styles/general";
+@import "./app/assets/styles/input";
+
+.con {
+  background: url(../src/app/assets/images/bg.webp);
+  // margin-top: -5%;
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 716px;
+    height: 736px;
+    background: linear-gradient(
+      180deg,
+      rgba(18, 18, 18, 0) 0%,
+      rgba(0, 0, 0, 0.19) 57.49%,
+      #000000 100%
+    );
+    margin: auto;
+    .profile-icon {
+      width: 28px;
+      height: 20px;
+      cursor: pointer;
+    }
+    
+    .profile-heading {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 64px;
+      line-height: 78px;
+      background: linear-gradient(93.31deg, #8e15e4 0%, #f3ea14 100.9%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      width: 439px;
+      height: 76.44px;
+      margin: auto;
+      text-align: center;
+      // padding-top: 32px;
+      // padding-bottom: 0px;
+      margin-bottom: 10px;
+      h1 {
+        margin-top: 7%;
+      }
+    }
+    .progress {
+      display: flex;
+      justify-content: center;
+      height: 4px;
+      background: transparent;
+      // margin-top: -50%;
+      // padding-bottom: 20px;
+      margin-bottom: 5%;
+      .progress1 {
+        width: 145.52px;
+        height: 4px;
+        background: rgba(160, 70, 224, 0.1);
+        border: none;
+        margin-left: 3%;
+      }
+      .progress-complete {
+        background-color: #a046e0 !important;
+      }
+    }
+    .profile-select {
+      margin-top: 45px;
+    }
+    .profile-paragraph {
+      text-align: center;
+      margin-top: 40px;
+      margin-right: 25%;
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 33px;
+      color: white;
+    }
+    .form-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      form {
+        display: flex;
+        flex-direction: row;
+        margin-right: 10%;
+        margin-left: 1.5%;
+      }
+      .form-radio {
+        margin: 15px;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 12px;
+        color: #4f4d4d;
+      }
+    }
+    .profile-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 17%;
+      margin-bottom: 20%;
+      button {
+        width: 223.94px;
+        height: 58px;
+        background: #404040;
+        border-radius: 45px;
+        border: none;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 34px;
+        text-align: center;
+        color: #7a7a7a;
+      }
+    }
+  }
+}
+
+// Second step
+.secondstep-input {
+  margin-top: 70px;
+}
+
+// Third step
+.thirdstep-container {
+  margin-top: 2%;
+  .thirdstep-select {
+    margin-top: 50px;
+  }
+  .thirdstep-paragraph p {
+    text-align: center;
+    margin-left: 37%;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #424242;
+    margin-top: 10px;
+  }
+  .thirdstep-paragraph-2 p {
+    text-align: center;
+    margin-left: 58%;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #424242;
+    margin-top: 10px;
+  }
+}
 //
 //
 //
