@@ -1,18 +1,20 @@
 import PropTypes from "prop-types";
 import { Image } from "react-bootstrap";
-const Input =({type,placeholder,name,inputClass,error,imgSrc})=>{
+import React from "react";
+const Input =React.forwardRef(({type,placeholder,name,inputClass,error,imgSrc,...rest}, ref)=>{
   return(
     <>
-      <div className="div-container">
+      <div className="div-container" ref={ref}>
       <div className="input-container">
       {imgSrc !== null ? <Image src={imgSrc}/> : ""}
       <input type={type} placeholder={placeholder} name={name} className={ error === null ? inputClass : 'error-input ' + inputClass } 
+      {...rest}
        />
      </div>
       </div>
     </>
   );
-};
+});
 
 Input.defaultProps = {
   type: "text",

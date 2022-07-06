@@ -32,7 +32,7 @@ const Profile = () => {
           </div>
           </div>
           <div>
-          {stepCount === 1? <FirstStep stepCount={(e)=>setStepCount(e)}/>: stepCount === 2 ? <SecondStep/>: stepCount === 3 ? <ThirdStep/>:""}
+          {stepCount === 1? <FirstStep stepCount={(e)=>setStepCount(e)}/>: stepCount === 2 ? <SecondStep stepCount={(e)=>setStepCount(e)}/>: stepCount === 3 ? <ThirdStep/>:""}
           </div>
           {/* <div className="profile-btn">
             <button type="submit" onClick={()=>stepCount === 3 ? null : setStepCount(stepCount+1)}>Continue</button>
