@@ -16,18 +16,19 @@ const FirstStep = ({stepCount})=>{
     <>
     <form onSubmit={handleSubmit(onSubmitHandler)}>
     <div className="profile-select">
-    <Select selectClass={"start-select"} dataArr={[{label:'option 1',value:'option1'}]} 
+    <Select selectClass={"start-select"} dataArr={[{label:'option 1',value:'option1'},{label:'option 2',value:'option2'}]} 
     name='option'
-     {...register("option")}
-     error={errors.option?.message}
+     {...register('option')}
+     
     />
+    <p className="error1">{errors.option?.message}</p>
     </div>
     <div className="profile-paragraph">
       <p>Add display name (optional)</p>
     </div>
     <div className="form-container">
       <div className="form-radio">
-      <input type="radio" id="user" name="radio_1" value="username" />
+      <input type="radio" id="user" name="radio_1" value="username"/>
       <label htmlFor="user">Username</label>
       </div>
       <div className="form-radio">
