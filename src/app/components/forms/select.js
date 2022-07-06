@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
-const Select =({selectClass,dataArr,name,placeholder})=>{
+import React from "react";
+const Select =React.forwardRef(({selectClass,dataArr,name,placeholder,...rest}, ref)=>{
   return (
     <>
-      <div className="select-container">
-         <select className={selectClass} placeholder={placeholder} name={name}>
+      <div className="select-container" ref={ref}>
+         <select className={selectClass} placeholder={placeholder} name={name} {...rest}>
          {dataArr.map((item,i)=>( 
           <option key={'option-'+ i} value={item.value}>{item.label}</option>
          ))}
@@ -11,12 +12,12 @@ const Select =({selectClass,dataArr,name,placeholder})=>{
       </div>
     </>
   );
-};
+});
 
 Select.defaultProps = {
   dataArr:[],
   placeholder:'Select option',
-  name:'select',
+  name:'option',
 };
 
 Select.propTypes = {

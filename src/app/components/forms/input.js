@@ -7,7 +7,7 @@ const Input =({type,placeholder,name,inputClass,error,imgSrc})=>{
       <div className="input-container">
       {imgSrc !== null ? <Image src={imgSrc}/> : ""}
       <input type={type} placeholder={placeholder} name={name} className={ error === null ? inputClass : 'error-input ' + inputClass } 
-      />
+       required/>
      </div>
       </div>
     </>

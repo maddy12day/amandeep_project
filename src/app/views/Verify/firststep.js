@@ -1,30 +1,47 @@
 import Select from "../../components/forms/select";
-const FirstStep = ()=>{
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { userschema } from "../../utils/Validaton";
+const FirstStep = ({stepCount})=>{
+
+  const { register, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(userschema),
+      });
+
+      const onSubmitHandler = (data) => {
+        console.log({ data });
+        stepCount(2);
+      };
   return(
     <>
-    
+    <form onSubmit={handleSubmit(onSubmitHandler)}>
     <div className="profile-select">
-    <Select selectClass={"start-select"} dataArr={[{label:'option 1',value:'option1'}]}/>
+    <Select selectClass={"start-select"} dataArr={[{label:'option 1',value:'option1'}]} 
+    name='option'
+     {...register("option")}
+     error={errors.option?.message}
+    />
     </div>
     <div className="profile-paragraph">
       <p>Add display name (optional)</p>
     </div>
     <div className="form-container">
-     <form >
       <div className="form-radio">
-      <input type="radio" id="user" name="radio_1" value="username" checked="checked"/>
-      <label for="user">Username</label>
+      <input type="radio" id="user" name="radio_1" value="username" />
+      <label htmlFor="user">Username</label>
       </div>
       <div className="form-radio">
       <input type="radio" id="full" name="radio_2" value="fullname"/>
-      <label for="full">Full Name</label>
+      <label htmlFor="full">Full Name</label>
       </div>
       <div className="form-radio">
       <input type="radio" id="show" name="radio_3" value="showname"/>
-      <label for="show">Show Name</label>
+      <label htmlFor="show">Show Name</label>
       </div>
-     </form>
      </div>
+     <button className="profile-btn" type="submit" >Continue
+     </button>
+     </form>
     </>
   )
 }
