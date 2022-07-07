@@ -87,6 +87,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-right: 46px;
       form {
         display: flex;
         flex-direction: row;
@@ -109,10 +110,11 @@
       justify-content: center;
       margin-top: 14%;
       margin-bottom: 20%;
-      margin-left: 39%;
-      button {
-        width: 223.94px;
+      margin-left: 36%;
+      width: 223.94px;
         height: 58px;
+      button {
+        
         background: #404040;
         border-radius: 45px;
         border: none;

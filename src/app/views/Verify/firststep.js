@@ -28,15 +28,15 @@ const FirstStep = ({stepCount})=>{
     </div>
     <div className="form-container">
       <div className="form-radio">
-      <input type="radio" id="user" name="radio_1" value="username"/>
+      <input type="radio" id="user" name="display_name" value="username"/>
       <label htmlFor="user">Username</label>
       </div>
       <div className="form-radio">
-      <input type="radio" id="full" name="radio_2" value="fullname"/>
+      <input type="radio" id="full" name="display_name" value="fullname"/>
       <label htmlFor="full">Full Name</label>
       </div>
       <div className="form-radio">
-      <input type="radio" id="show" name="radio_3" value="showname"/>
+      <input type="radio" id="show" name="display_name" value="showname"/>
       <label htmlFor="show">Show Name</label>
       </div>
      </div>
