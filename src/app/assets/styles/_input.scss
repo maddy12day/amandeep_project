@@ -1,0 +1,51 @@
+.div-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #bebebe;
+  width: 492px;
+  margin: auto;
+  .input-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 28%;
+  }
+  .start-input {
+    border: none;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #777676;
+    outline: none;
+    background: transparent;
+  }
+  .error-input {
+    color: red;
+    border-bottom: 1px solid red;
+  }
+}
+
+.select-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  .start-select {
+    border: none;
+    border-bottom: 1px solid #bebebe;
+    width: 492px;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: #777676;
+    outline: none;
+    background: transparent;
+  }
+}

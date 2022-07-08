@@ -1,5 +1,6 @@
 import Icon from "../../assets/images/icon.png"
 import Line from "../../assets/images/Line.png"
+import {Link} from "react-router-dom"
 
 const Signup = () => {
     return (
@@ -16,7 +17,9 @@ const Signup = () => {
                             <img src={Line} alt="line" />
                         </div>
                         <div className="verify-button">
-                            <button>verify</button>
+                            <Link to="/verify">
+                                <button>verify</button>
+                            </Link>
                         </div>
                         <div className="para"><p>if you don't have invite code you can ask for  a </p>
                             <p>refferal from any current fanClub user</p>
