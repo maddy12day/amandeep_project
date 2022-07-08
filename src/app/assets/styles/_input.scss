@@ -35,8 +35,9 @@
   display: flex;
   justify-content: center;
   margin: auto;
-  .start-select {
-    border: none;
+  position: relative;
+  select {
+    border: 0;
     border-bottom: 1px solid #bebebe;
     width: 492px;
     font-family: "Nunito";
@@ -45,8 +46,54 @@
     font-size: 24px;
     line-height: 33px;
     text-align: center;
-    color: #777676;
+    color:   #777676;
     outline: none;
     background: transparent;
+   cursor:pointer;
+   margin-left: 27px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0)
+    
   }
+}
+
+.custom-arrow{
+  position: absolute;
+  top: 1px;
+    right: 98px;
+  display: block;
+  background: #3b3c47;
+  height: 100%;
+  width: 4rem;
+  pointer-events: none;
+}
+
+.custom-arrow::before,
+.custom-arrow::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  
+  transform: translate(-50%,-50%)
+}
+
+.custom-arrow::before{
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-bottom: 0.5em solid #BEBEBE;
+  top: 35%;
+}
+
+.custom-arrow::after{
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-top: 0.5em solid #BEBEBE;
+  top: 65%;
+}
+
+// #404040
+
+option{
+  background:#404040 ;
 }
