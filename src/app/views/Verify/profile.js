@@ -18,7 +18,7 @@ const Profile = () => {
     <>
       <div className="con">
         <div className="profile-container">
-        <div className="profile-icon" onClick={()=>setStepCount(stepCount-1)}>
+        <div className="profile-icon" onClick={()=>stepCount === 1 ? null :setStepCount(stepCount-1)}>
         {stepCount === 1 ? " " : <Image src={Arrow}/>}
         </div> 
         <div className="profile-header">
