@@ -1,33 +1,60 @@
-import Icon from "../../assets/images/icon.png"
-import Line from "../../assets/images/Line.png"
-import {Link} from "react-router-dom"
+import Icon from "../../assets/images/icon.png";
+import Line from "../../assets/images/Line.png";
+import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
 
 const Signup = () => {
-    return (
-        <>
-        <section className="main">
-            <div className="sub-main">
-                <div>
-                    <div className="title">Sign Up</div>
-                        <div>
-                            <img src={Icon} alt="Icon"/>
-                            <input type="text" placeholder="Enter invite code" className="code"/>
-                        </div>
-                        <div>
-                            <img src={Line} alt="line" />
-                        </div>
-                        <div className="verify-button">
-                            <Link to="/verify">
-                                <button>verify</button>
-                            </Link>
-                        </div>
-                        <div className="para"><p>if you don't have invite code you can ask for  a </p>
-                            <p>refferal from any current fanClub user</p>
-                        </div>
-                </div>
+  //
+  // Code validate
+  //
+  let navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const [userInfo, setUserInfo] = useState();
+  const onSubmit = (data) => {
+    setUserInfo(data);
+    navigate("/verify");
+  };
+
+  return (
+    <>
+      <section className="main">
+        <div className="sub-main">
+          <div>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="title">Sign Up</div>
+            <div>
+              <img src={Icon} alt="Icon" className="symb" />
+              <input
+                type="text"
+                name="abc"
+                id="code"
+                placeholder="Enter invite code"
+                {...register("abc", {
+                  required: "Invite Code is required",
+                })}
+              />
             </div>
-        </section>
-        </>
-    )
-}
+            <div>
+              <img src={Line} alt="line" />
+            </div>
+            <p id="error">{errors.abc?.message}</p>
+            <div className="verify-button">
+              <button>Verify</button>
+            </div>
+            <div className="para">
+              <p>If you don't have invite code you can ask for a </p>
+              <p>refferal from any current fanClub user</p>
+            </div>
+          </form>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
 export default Signup;

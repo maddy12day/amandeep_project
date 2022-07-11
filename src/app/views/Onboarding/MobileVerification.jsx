@@ -6,6 +6,7 @@ import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { useEffect, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 import {
   isPossiblePhoneNumber,
@@ -15,13 +16,15 @@ import {
 } from "libphonenumber-js";
 
 const MobileVerification = () => {
-  const [num, setNum] = useState("");
+  var [num, setNum] = useState("");
   const [flag, setFlag] = useState(false);
   const [flag2, setFlag2] = useState(true);
 
-  function Validate() {
-    console.log("Validation")
+  function Validate(num) {
+    console.log("validate")
+    // console.log(data)
     const phoneNumber = parsePhoneNumber(num);
+    console.log(phoneNumber.number)
     if (!isValidPhoneNumber(phoneNumber.number, phoneNumber.country)) {
       alert("Number doesn't exsist");
     } else {
@@ -37,13 +40,6 @@ const MobileVerification = () => {
     return setFlag2(false);
   }
 
-  // var timeleft = 60;
-  // var downloadTimer = setTimeout(function(){
-  // timeleft--;
-
-  // if(timeleft <= 0)
-  //     changeFlag2();
-  // },1000);
   const Timer = async () => {
     for (let i = 60; i >= 0; i--) {
       document.getElementById("countdowntimer").textContent = i;
@@ -65,6 +61,7 @@ const MobileVerification = () => {
   //
   // OTP react-hook-form validation
   //
+  let navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -73,14 +70,15 @@ const MobileVerification = () => {
   const [userInfo, setUserInfo] = useState();
   const onSubmit = (data) => {
     setUserInfo(data);
+    navigate("/profile")
   };
-  
+
 
   //
   //Mobile number react-hook-form validation
   //
 
-
+  console.log(num)
   const {
     register: register2,
     formState: { errors: errors2 },
@@ -88,9 +86,9 @@ const MobileVerification = () => {
     control,
   } = useForm();
   const onSub = (data) => {
-    console.log(data);
     console.log("onsub")
     setFlag(true)
+    // Validate(data)
   };
 
   return (
@@ -123,7 +121,7 @@ const MobileVerification = () => {
           </div>
           <p id="error">{errors2.bcd?.message}</p>
           <div className="verify-button">
-            <button type="submit">verify</button>
+            <button type="submit">Continue</button>
           </div>
         </div>
         </form>}  
@@ -158,12 +156,10 @@ const MobileVerification = () => {
             </div>
             <p id="error">{errors.abc?.message}</p>
             <p style={{ display: flag2 ? "flex" : "none" }} id="resend">
-              {" "}
               Resend OTP (0:<span id="countdowntimer">60</span>)
             </p>
             <a style={{ display: !flag2 ? "flex" : "none" }} id="resendlink">
-              {" "}
-              Resend OTP{" "}
+              Resend OTP
             </a>
             <div className="verify-button">
               <button>verify</button>
