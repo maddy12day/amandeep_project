@@ -3,14 +3,16 @@
 @import "./app/assets/styles/input";
 
 .con {
-  background: url(../src/app/assets/images/bg.webp);
-  // margin-top: -5%;
+  // background: url(../src/app/assets/images/bg.webp);
+  // width: 100%;
+  // height: 100%;
   .profile-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 716px;
     height: 736px;
+    background-size: cover;
     background: linear-gradient(
       180deg,
       rgba(18, 18, 18, 0) 0%,
@@ -363,7 +365,12 @@ ul {
 
 .layout-bg {
   background-image: url("./app/assets/images/bg.webp");
-  background-size: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: fit-content;
+  background-position: center center;
+
 }
 
 .error1 {
@@ -413,4 +420,68 @@ input[type="radio"]:checked + label::after {
 input[type="radio"]:checked + label::before {
   border: 2px solid #A046E0;
  
+}
+
+@media screen and (max-width: 768px){
+  .con{
+    width: 79%;
+    margin: auto;
+  .profile-container{
+    width: 116%;
+    margin-left: -22px;
+    .form-container .form-radio {
+      font-size: 16px;
+    }
+    .profile-select{
+      margin-top: 21px;
+    }
+    .profile-header .profile-heading {
+      width: 222px;
+      margin-bottom: -17px;
+      h1{
+        font-size: 23px;
+        margin-right: 11px;
+      }
+    }
+     .profile-paragraph{
+      font-size: 13px;
+      margin-right: 20%;
+      margin-top: 30px;
+     }
+     .form-container{
+      flex-direction: column;
+      align-items: start;
+      margin-left: 25%;
+     }
+     .profile-btn {
+      width: 136px;
+      margin-left: 28%;
+      height: 45px;
+      margin-top: 26%;
+      font-size: 17px;
+     }
+  .progress{
+ .progress1{
+    width: 32.5px;
+    margin-right: 18px;
+  }
+}
+}
+}
+}
+@media screen and (max-width: 768px){
+  .thirdstep-container{
+ .thirdstep-paragraph p {
+    font-size: 8px;
+    margin-top: -9px;
+  }
+  .thirdstep-paragraph-2 p {
+    font-size:8px ;
+    margin-top: -9px;
+}
+}
+.error1{
+  font-size: 10px;
+  margin-right: 20px;
+}
 }
