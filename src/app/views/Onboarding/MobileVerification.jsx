@@ -119,7 +119,7 @@ const MobileVerification = () => {
             />
           </div>
           <div>
-            <img src={Line} alt="line" />
+            <img src={Line} alt="line" className="image-signup" />
           </div>
           <p id="error">{errors2.bcd?.message}</p>
           <div className="verify-button">
@@ -154,7 +154,7 @@ const MobileVerification = () => {
               />
             </div>
             <div>
-              <img src={Line} alt="line" />
+              <img src={Line} alt="line" className="image-signup"/>
             </div>
             <p id="error">{errors.abc?.message}</p>
             <p style={{ display: flag2 ? "flex" : "none" }} id="resend">
@@ -166,7 +166,7 @@ const MobileVerification = () => {
               Resend OTP{" "}
             </a>
             <div className="verify-button">
-              <button>verify</button>
+              <button>Verify</button>
             </div>
           </div>
         </form>}

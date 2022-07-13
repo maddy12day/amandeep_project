@@ -1,6 +1,7 @@
 import Icon from "../../assets/images/icon.png"
 import Line from "../../assets/images/Line.png"
 import {Link} from "react-router-dom"
+import { Image } from "react-bootstrap"
 
 const Signup = () => {
     return (
@@ -9,13 +10,15 @@ const Signup = () => {
             <div className="sub-main">
                 <div>
                     <div className="title">Sign Up</div>
-                        <div>
-                            <img src={Icon} alt="Icon"/>
+                    <div >
+                    <img src={Icon} alt="Icon" className="signup-icon"/>
                             <input type="text" placeholder="Enter invite code" className="code"/>
+                    </div>
+                        <div className="signup-input">
                         </div>
-                        <div>
-                            <img src={Line} alt="line" />
-                        </div>
+                        {/* <div className="image-signup">
+                            <Image src={Line} />
+                        </div> */}
                         <div className="verify-button">
                             <Link to="/verify">
                                 <button>verify</button>
