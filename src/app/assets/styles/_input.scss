@@ -109,10 +109,11 @@ option{
     }
   }
   .custom-arrow{
-    right: 47px;
-    top: -3px;
-    width: 2rem;
-    height: 107%;
+    // right: 47px;
+    // top: -3px;
+    // width: 2rem;
+    // height: 107%;
+    display: none;
   }
   .custom-arrow::before{
     top:23%;

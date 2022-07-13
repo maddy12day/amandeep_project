@@ -14,6 +14,7 @@ const Footer = () => {
         </div>
         <div className="col-md-8 col-sm-12">
           <ul className="d-flex justify-content-md-around justify-content-start flex-column  flex-md-row align-items-center">
+          <div className="footer-list">
             <li>
               <a className="text" href="#">
                 Terms
@@ -49,10 +50,13 @@ const Footer = () => {
                 Press inquiries
               </a>
             </li>
+            </div>
             <li>
+            <div className="footer-btn">
               <a className="text button-f" href="#">
                 Get App
               </a>
+              </div>
             </li>
           </ul>
         </div>
