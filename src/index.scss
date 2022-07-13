@@ -181,8 +181,12 @@
   width: 10rem;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
   list-style: none;
+  margin: auto
 }
 
 .nav {
@@ -203,13 +207,16 @@
   margin-left: 4rem;
   margin-right: 4rem;
   list-style: none;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700; 
 }
 .ele:hover {
   color: #ffffff;
 }
 
 .icon {
-  height: 13rem;
+  height: 11rem;
   margin-top: 1rem;
 }
 
@@ -270,8 +277,9 @@
 
 .title {
   margin-bottom: 4rem;
-  font-family: "Montserrat";
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
+  font-weight: 400;
   font-size: 3rem;
   background: linear-gradient(93.31deg, #8e15e4 0%, #f3ea14 100.9%);
   -webkit-background-clip: text;
@@ -297,11 +305,63 @@ button {
   border: none;
   font-family: "Nunito";
   font-style: normal;
+  font-weight: 500;
 }
 
 .para {
   color: #ffffff;
   margin-top: 3rem;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+}
+
+#num{
+  color: #777676;
+  font-size: 1.5rem;
+  text-indent: 6px;
+}
+
+#otp{
+  color: #777676;
+  font-size: 1.5rem;
+  text-indent: 6px;
+}
+ #resend{
+  color: #9D9D9D;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5.5rem;
+ } 
+#resendlink{
+  color: #F4E900;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5.5rem;
+}
+#arrow{
+  margin-bottom: 3rem ;
+  margin-right: 40rem;
+}
+#error{
+  color: red;
+  display: flex;
+  justify-content: center;
+}
+#code{
+  color: #777676;
+  font-size: 1.5rem;
+  text-indent: 6px;
+}
+.symb{
+  margin-bottom: 11px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button
+{ 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 ////
@@ -334,20 +394,28 @@ ul {
   width: 10rem;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
 }
 
-.text {
-  color: #ffffff;
+.text{
+  color: #DBDBDB;
   text-decoration: none;
   list-style: none;
   margin-left: 1rem;
   margin-right: 1rem;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
 }
 
-.text:hover {
-  color: #ffffff;
+.text:hover{
+  color : #DBDBDB;
 }
 
 .logo {
