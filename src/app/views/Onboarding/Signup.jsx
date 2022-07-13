@@ -3,8 +3,9 @@ import Line from "../../assets/images/Line.png";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import * as defaultService from "../../services/default"
 
-const Signup = () => {
+const Signup = ({ childToParent }) => {
   //
   // Code validate
   //
@@ -17,8 +18,13 @@ const Signup = () => {
   const [userInfo, setUserInfo] = useState();
   const onSubmit = (data) => {
     setUserInfo(data);
-    navigate("/verify");
+    console.log(data)
+    navigate("/verify",{code : data.code });
+    // childToParent(data)
   };
+
+  //otp post
+
 
   return (
     <>
@@ -34,7 +40,7 @@ const Signup = () => {
                 name="abc"
                 id="code"
                 placeholder="Enter invite code"
-                {...register("abc", {
+                {...register("code", {
                   required: "Invite Code is required",
                 })}
               />
@@ -42,7 +48,7 @@ const Signup = () => {
             <div>
               <img src={Line} alt="line" />
             </div>
-            <p id="error">{errors.abc?.message}</p>
+            <p id="error">{errors.code?.message}</p>
             <div className="verify-button">
               <button>Verify</button>
             </div>

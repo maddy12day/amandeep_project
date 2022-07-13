@@ -3,8 +3,10 @@ import Layout from "./components/layout";
 import Signup from "./views/Onboarding/Signup";
 import Profile from "./views/Verify/profile";
 import MobileVerification from"./views/Onboarding/MobileVerification"; 
+import { useState } from "react";
 
 function App() {
+  
   return (
     <BrowserRouter>
       <Layout
@@ -14,7 +16,8 @@ function App() {
           // </Routes>
           <Routes>
             <Route path="/" element={<Signup />} />
-            <Route path="/verify" element={<MobileVerification/>} />
+            <Route path="/verify" element={<MobileVerification />} />
+            <Route path="/verify/:code" element={<MobileVerification />} />
             <Route path="/profile" element={<Profile />} />
           </Routes>
         }

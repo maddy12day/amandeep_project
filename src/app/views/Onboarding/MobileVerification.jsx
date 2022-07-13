@@ -5,8 +5,8 @@ import Arrow from "../../assets/images/arrow-left.png";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { useEffect, useState } from "react";
-import { useForm, Controller } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 import {
   isPossiblePhoneNumber,
@@ -16,7 +16,7 @@ import {
 } from "libphonenumber-js";
 
 const MobileVerification = () => {
-  var [num, setNum] = useState("");
+  var [num, setNum] = useState('');
   const [flag, setFlag] = useState(false);
   const [flag2, setFlag2] = useState(true);
 
@@ -78,7 +78,6 @@ const MobileVerification = () => {
   //Mobile number react-hook-form validation
   //
 
-  console.log(num)
   const {
     register: register2,
     formState: { errors: errors2 },
@@ -86,10 +85,17 @@ const MobileVerification = () => {
     control,
   } = useForm();
   const onSub = (data) => {
+    console.log(num)
     console.log("onsub")
     setFlag(true)
     // Validate(data)
   };
+
+  //using params to get code
+  const {code} = useParams()
+  // const{data} = state
+  console.log(code)
+
 
   return (
     <section className="main">
