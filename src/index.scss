@@ -224,28 +224,28 @@
   Media Queries
 ==================================== */
 
-// @media (min-width: 769px) {
-//   .head,
-//   .nav {
-//     display: flex;
-//   }
-//   .head {
-//     flex-direction: column;
-//     align-items: center;
-//     .head {
-//       width: 80%;
-//       margin: 0 auto;
-//       max-width: 1150px;
-//     }
-//   }
-// }
+@media (min-width: 769px) {
+  .head,
+  .nav {
+    display: flex;
+  }
+  .head {
+    flex-direction: column;
+    align-items: center;
+    .head {
+      width: 80%;
+      margin: 0 auto;
+      max-width: 1150px;
+    }
+  }
+}
 
-// @media (min-width: 1025px) {
-//   .head {
-//     flex-direction: row;
-//     justify-content: space-between;
-//   }
-// }
+@media (min-width: 1025px) {
+  .head {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 //
 //
@@ -623,4 +623,41 @@ input[type="radio"]:checked + label::before {
     font-size: 13px;
     margin-right: 11px;
   }
+}
+
+
+/* Phone Input Style */
+.react-tel-input {
+  margin-left: 5px;
+  width: auto;
+}
+.react-tel-input .form-control {
+  background: transparent !important;
+  border: none !important;
+  outline: 0;
+  box-shadow: none;
+  font-size: 18px !important;
+  line-height: 30px !important;
+  color: #b5b5b5 !important;
+}
+
+.react-tel-input .flag-dropdown {
+  background-color: transparent !important;
+  border: none !important;
+}
+.react-tel-input .flag-dropdown.open {
+  background: transparent !important;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background: transparent !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background-color: transparent !important;
+}
+
+.react-tel-input .selected-flag .flag {
+  transform: scale(1.4);
 }

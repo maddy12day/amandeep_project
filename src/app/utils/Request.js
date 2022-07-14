@@ -1,12 +1,9 @@
-// import axios from 'axios';
-
-const url = process.env.REACT_APP_API_BASE_URL 
-
-// export default axios.create({
-//     baseURL: url
-// })
-
-export const handleApi = async(promise) => {
-    return promise.then((result) => result.data )
-    .catch((err) => Promise.resolve(err.response.data))
-} 
+import axios from "axios";
+import { BASE_URL } from "./Constant";
+export default axios.create({
+  baseURL: BASE_URL,
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    "Content-Type": "application/json",
+  },
+});

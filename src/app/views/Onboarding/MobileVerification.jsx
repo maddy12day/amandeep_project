@@ -2,177 +2,137 @@ import Icon from "../../assets/images/smartphone.png";
 import Line from "../../assets/images/Line.png";
 import Frame from "../../assets/images/Frame.png";
 import Arrow from "../../assets/images/arrow-left.png";
-import "react-phone-number-input/style.css";
-import PhoneInput from "react-phone-number-input";
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+import { useParams } from "react-router-dom";
+import * as defaultService from "../../services/default";
+import { isValidNumber } from "libphonenumber-js";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
-import {
-  isPossiblePhoneNumber,
-  isValidPhoneNumber,
-  validatePhoneNumberLength,
-  parsePhoneNumber,
-} from "libphonenumber-js";
-
-const MobileVerification = () => {
-  var [num, setNum] = useState('');
-  const [flag, setFlag] = useState(false);
-  const [flag2, setFlag2] = useState(true);
-
-  function Validate(num) {
-    console.log("validate")
-    // console.log(data)
-    const phoneNumber = parsePhoneNumber(num);
-    console.log(phoneNumber.number)
-    if (!isValidPhoneNumber(phoneNumber.number, phoneNumber.country)) {
-      alert("Number doesn't exsist");
-    } else {
-      changeFlag();
-    }
-  }
-
-  function changeFlag() {
-    return setFlag(true);
-  }
-
-  function changeFlag2() {
-    return setFlag2(false);
-  }
-
-  const Timer = async () => {
-    for (let i = 60; i >= 0; i--) {
-      document.getElementById("countdowntimer").textContent = i;
-      if (i == 0) {
-        changeFlag2();
-      }
-      await sleep(1000);
-    }
-  };
-
-  function sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-
-  useEffect(() => {
-    Timer();
-  });
-
-  //
-  // OTP react-hook-form validation
-  //
-  let navigate = useNavigate();
+const MobileVerification = (props) => {
+  const { code } = useParams();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [userInfo, setUserInfo] = useState();
-  const onSubmit = (data) => {
-    setUserInfo(data);
-    navigate("/profile")
-  };
-
-
-  //
-  //Mobile number react-hook-form validation
-  //
-
   const {
-    register: register2,
+    control,
     formState: { errors: errors2 },
     handleSubmit: handleSubmit2,
-    control,
   } = useForm();
+ 
+  const [formValues , setFormValues] = useState(null);
+  const [flag, setFlag] = useState(false);
+  const [flag2, setFlag2] = useState(true);
+
+
   const onSub = (data) => {
-    console.log(num)
-    console.log("onsub")
-    setFlag(true)
-    // Validate(data)
+    data.code = code;
+    setFormValues(data);
+    sendData(data);
   };
 
-  //using params to get code
-  const {code} = useParams()
-  // const{data} = state
-  console.log(code)
+  const onSubmit = (data) => {
+    // navigate("/profile");
+    data.code = formValues.code;
+    data.mobile = formValues.mobile;
+    sendData(data);
+  };
 
+  const sendData = (data) => {
+    defaultService.signUp(data).then((response) => {
+      if (response) {
+        console.log(response);
+        if(data.mobile){
+          setFlag(true);
+        }
+      }
+    });
+  }
 
   return (
     <section className="main">
       <div className="sub-main">
-
-        {/*  */}
-        {/* Mobile number page */}
-        {/*  */}
-
-        {!flag && <form onSubmit={handleSubmit2(onSub)} >
-        <div>
-          <div className="title">Sign Up</div>
-          <div className="d-flex justify-content-center ">
-            <img src={Icon} alt="Icon" />
-            <PhoneInput
-              onChange={(e) => setNum(e)}
-              placeholder="Your Mobile Number"
-              defaultCountry="IN"
-              value={num}
-              id="num"
-              name="bcd"
-              {...register2("bcd", {
-                required: "Number is required",
-              })}
-            />
-          </div>
-          <div>
-            <img src={Line} alt="line" className="image-signup" />
-          </div>
-          <p id="error">{errors2.bcd?.message}</p>
-          <div className="verify-button">
-            <button type="submit">Continue</button>
-          </div>
-        </div>
-        </form>}  
-
-        {/*  */}
-        {/* OTP Page */}
-        {/*  */}
-
-         {flag && <form onSubmit={handleSubmit(onSubmit)}>
-          <div style={{ display: flag ? "block" : "none" }}>
-            <input
-              type="image"
-              src={Arrow}
-              onClick={() => setFlag(false)}
-              id="arrow"
-            />
-            <div className="title">Sign Up</div>
-            <div className="d-flex justify-content-center ">
-              <img src={Frame} alt="Icon" />
-              <input
-                type="number"
-                name="abc"
-                id="otp"
-                placeholder="Enter OTP"
-                {...register("abc", {
-                  required: "OTP is required",
-                })}
-              />
-            </div>
+        {!flag && (
+          <form onSubmit={handleSubmit2(onSub)}>
             <div>
-              <img src={Line} alt="line" className="image-signup"/>
+              <div className="title">Sign Up</div>
+              <div className="d-flex justify-content-center ">
+                <img src={Icon} alt="Icon" />
+                <Controller
+                    control={control}
+                    name="mobile"
+                    rules={{required : 'Mobile number is required.' , validate : isValidNumber }}
+                    render={({
+                      field: { onChange, onBlur, value, name, ref },
+                    }) => (
+                      <PhoneInput
+                        name={name}
+                        placeholder={'Mobile Number'}
+                        country={"us"}
+                        value={value}
+                        onChange={(e) => onChange('+'+e)}
+                      />
+                    )}
+                  />
+              </div>
+              <div>
+                <img src={Line} alt="line" className="image-signup" />
+              </div>
+              <p id="error">
+              {errors2.mobile?.type === 'required' && 'Mobile number is required.'}
+              {errors2.mobile?.type === 'validate' && 'Mobile number is not valid.'}
+              </p>
+              <div className="verify-button">
+                <button type="submit">Continue</button>
+              </div>
             </div>
-            <p id="error">{errors.abc?.message}</p>
-            <p style={{ display: flag2 ? "flex" : "none" }} id="resend">
-              Resend OTP (0:<span id="countdowntimer">60</span>)
-            </p>
-            <a style={{ display: !flag2 ? "flex" : "none" }} id="resendlink">
-              Resend OTP
-            </a>
-            <div className="verify-button">
-              <button>Verify</button>
+          </form>
+        )}
+
+        {flag && (
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div style={{ display: flag ? "block" : "none" }}>
+              <img
+                src={Arrow}
+                onClick={() => setFlag(false)}
+                alt="test"
+                id="arrow"
+              />
+              <div className="title">Sign Up</div>
+              <div className="d-flex justify-content-center ">
+                <img src={Frame} alt="Icon" />
+                <input
+                  type="number"
+                  name="otp"
+                  id="otp"
+                  placeholder="Enter OTP"
+                  {...register("otp", {
+                    required: "OTP is required",
+                  })}
+                />
+              </div>
+              <div>
+                <img src={Line} alt="line" className="image-signup" />
+              </div>
+              <p id="error">{errors.abc?.message}</p>
+              <p style={{ display: flag2 ? "flex" : "none" }} id="resend">
+                Resend OTP (0:<span id="countdowntimer">60</span>)
+              </p>
+              <span
+                style={{ display: !flag2 ? "flex" : "none" }}
+                id="resendlink"
+              >
+                Resend OTP
+              </span>
+              <div className="verify-button">
+                <button>Verify</button>
+              </div>
             </div>
-          </div>
-        </form>}
-        
+          </form>
+        )}
       </div>
     </section>
   );
