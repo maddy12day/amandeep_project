@@ -45,8 +45,8 @@ const Signup = ({ childToParent }) => {
                 })}
               />
             </div>
-            <div>
-              <img src={Line} alt="line" />
+            <div >
+              <img src={Line} alt="line" className="signup-image"/>
             </div>
             <p id="error">{errors.code?.message}</p>
             <div className="verify-button">

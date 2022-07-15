@@ -8,8 +8,7 @@ const Header = () => {
 		<img src={Logo} className="icon" alt="img"/>
         </div>
       <div className="nav">
-          <div><a href="#getstarted" className="ele">Get started</a></div>
-          <div><a href="#contact" className="button-h ele">Contact</a></div>
+          <a href="#contact" className="button-h ele">Contact</a>
       </div>
 	</header> 
 </>

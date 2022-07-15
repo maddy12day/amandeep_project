@@ -186,7 +186,7 @@
   align-content: center;
   text-align: center;
   list-style: none;
-  margin: auto
+  margin: auto;
 }
 
 .nav {
@@ -207,9 +207,9 @@
   margin-left: 4rem;
   margin-right: 4rem;
   list-style: none;
-  font-family: 'Nunito';
+  font-family: "Nunito";
   font-style: normal;
-  font-weight: 700; 
+  font-weight: 700;
 }
 .ele:hover {
   color: #ffffff;
@@ -224,28 +224,28 @@
   Media Queries
 ==================================== */
 
-// @media (min-width: 769px) {
-//   .head,
-//   .nav {
-//     display: flex;
-//   }
-//   .head {
-//     flex-direction: column;
-//     align-items: center;
-//     .head {
-//       width: 80%;
-//       margin: 0 auto;
-//       max-width: 1150px;
-//     }
-//   }
-// }
+@media (min-width: 769px) {
+  .head,
+  .nav {
+    display: flex;
+  }
+  .head {
+    flex-direction: column;
+    align-items: center;
+    .head {
+      width: 80%;
+      margin: 0 auto;
+      max-width: 1150px;
+    }
+  }
+}
 
-// @media (min-width: 1025px) {
-//   .head {
-//     flex-direction: row;
-//     justify-content: space-between;
-//   }
-// }
+@media (min-width: 1025px) {
+  .head {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 //
 //
@@ -277,7 +277,7 @@
 
 .title {
   margin-bottom: 4rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 3rem;
@@ -311,57 +311,56 @@ button {
 .para {
   color: #ffffff;
   margin-top: 3rem;
-  font-family: 'Nunito';
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 300;
 }
 
-#num{
+#num {
   color: #777676;
   font-size: 1.5rem;
   text-indent: 6px;
 }
 
-#otp{
+#otp {
   color: #777676;
   font-size: 1.5rem;
   text-indent: 6px;
 }
- #resend{
-  color: #9D9D9D;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 5.5rem;
- } 
-#resendlink{
-  color: #F4E900;
+#resend {
+  color: #9d9d9d;
   display: flex;
   justify-content: flex-end;
   margin-right: 5.5rem;
 }
-#arrow{
-  margin-bottom: 3rem ;
+#resendlink {
+  color: #f4e900;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5.5rem;
+}
+#arrow {
+  margin-bottom: 3rem;
   margin-right: 40rem;
 }
-#error{
+#error {
   color: red;
   display: flex;
   justify-content: center;
 }
-#code{
+#code {
   color: #777676;
   font-size: 1.5rem;
   text-indent: 6px;
 }
-.symb{
+.symb {
   margin-bottom: 11px;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button
-{ 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 ////
@@ -398,24 +397,24 @@ ul {
   justify-content: center;
   align-items: center;
   list-style: none;
-  font-family: 'Nunito';
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 700;
 }
 
-.text{
-  color: #DBDBDB;
+.text {
+  color: #dbdbdb;
   text-decoration: none;
   list-style: none;
   margin-left: 1rem;
   margin-right: 1rem;
-  font-family: 'Nunito';
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
 }
 
-.text:hover{
-  color : #DBDBDB;
+.text:hover {
+  color: #dbdbdb;
 }
 
 .logo {
@@ -439,24 +438,23 @@ ul {
   overflow: hidden;
   background-size: fit-content;
   background-position: center center;
-
 }
 
-.signup-input{
-  border-bottom:1px solid #BEBEBE; 
+.signup-input {
+  border-bottom: 1px solid #bebebe;
   width: 492px;
-height: 0px;
+  height: 0px;
 }
-.code{
+.code {
   margin-left: 7px;
 }
-.signup-icon{
+.signup-icon {
   margin-left: 7%;
 }
-.verify-button{
+.verify-button {
   margin-right: 6%;
 }
-#arrow{
+#arrow {
   margin-right: 94%;
 }
 
@@ -477,7 +475,7 @@ label {
 
 label::before {
   content: "";
-  border: 2px solid #4F4D4D;
+  border: 2px solid #4f4d4d;
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -501,105 +499,107 @@ label::after {
 
 input[type="radio"]:checked + label::after {
   background: rgba(160, 70, 224, 1);
- 
 }
 
 input[type="radio"]:checked + label::before {
-  border: 2px solid #A046E0;
- 
+  border: 2px solid #a046e0;
 }
 
-@media screen and (max-width: 768px){
-  .con{
+@media screen and (max-width: 768px) {
+  .con {
     width: 100%;
     margin: auto;
-  .profile-container{
-    width: 89%;
-    margin:0px auto;
-    .form-container .form-radio {
-      font-size: 16px;
-    }
-    .profile-select{
-      margin-top: 21px;
-    }
-    .profile-header .profile-heading {
-      width: 222px;
-      margin-bottom: -17px;
-      h1{
-        font-size: 23px;
-        margin-right: 11px;
+    .profile-container {
+      width: 89%;
+      margin: 0px auto;
+      .form-container .form-radio {
+        font-size: 16px;
+      }
+      .profile-select {
+        margin-top: 21px;
+      }
+      .profile-header .profile-heading {
+        width: 222px;
+        margin-bottom: -17px;
+        h1 {
+          font-size: 23px;
+          margin-right: 11px;
+        }
+      }
+      .profile-paragraph {
+        font-size: 13px;
+        margin-right: 20%;
+        margin-top: 30px;
+      }
+      .form-container {
+        flex-direction: column;
+        align-items: start;
+        margin-left: 25%;
+      }
+      .profile-btn {
+        width: 136px;
+        margin-left: 28%;
+        height: 45px;
+        margin-top: 26%;
+        font-size: 17px;
+      }
+      .progress {
+        .progress1 {
+          width: 32.5px;
+          margin-right: 18px;
+        }
       }
     }
-     .profile-paragraph{
-      font-size: 13px;
-      margin-right: 20%;
-      margin-top: 30px;
-     }
-     .form-container{
-      flex-direction: column;
-      align-items: start;
-      margin-left: 25%;
-     }
-     .profile-btn {
-      width: 136px;
-      margin-left: 28%;
-      height: 45px;
-      margin-top: 26%;
-      font-size: 17px;
-     }
-  .progress{
- .progress1{
-    width: 32.5px;
-    margin-right: 18px;
   }
 }
-}
-}
-}
-@media screen and (max-width: 768px){
-  .thirdstep-container{
- .thirdstep-paragraph p {
-    font-size: 8px;
-    margin-top: -9px;
+@media screen and (max-width: 768px) {
+  .thirdstep-container {
+    .thirdstep-paragraph p {
+      font-size: 8px;
+      margin-top: -9px;
+    }
+    .thirdstep-paragraph-2 p {
+      font-size: 8px;
+      margin-top: -9px;
+    }
   }
-  .thirdstep-paragraph-2 p {
-    font-size:8px ;
-    margin-top: -9px;
-}
-}
-.error1{
-  font-size: 10px;
-  margin-right: 20px;
-}
+  .error1 {
+    font-size: 10px;
+    margin-right: 20px;
+  }
 }
 
-@media screen and (max-width: 768px){
-  .sub-main{
+@media screen and (max-width: 768px) {
+  .sub-main {
     width: 20rem;
+    height: 41rem;
   }
   .image-signup {
-    width: 288px; ;
+    width: 288px;
   }
-  .title{
+  .signup-image {
+    width: 95%;
+  }
+  .title {
     font-size: 2.5rem;
     margin-left: 17px;
   }
-  #arrow{
+  #arrow {
     margin-right: 89%;
   }
-  .para{
+  .para {
     font-size: 12px;
   }
-  .signup-input{
+  .signup-input {
     width: 305px;
   }
-  .signup-icon{
+  .signup-icon {
     margin-left: 22%;
   }
-  .verify-button{
+  .verify-button {
     margin-right: 12px;
   }
-  .icon{
+  .icon {
     margin: auto;
     display: block;
     height: 195px;
@@ -609,18 +609,118 @@ input[type="radio"]:checked + label::before {
   //   width: 90px;
   //   padding: 8px 11px;
   // }
-  .logo{
+  .logo {
     padding-left: 0px;
     margin-bottom: -12px;
   }
-  .footer-btn{
+  .footer-btn {
     margin-right: 24px;
     margin-top: 18px;
   }
-  .footer-list{
+  .footer-list {
     line-height: 37px;
     margin-bottom: 16px;
     font-size: 13px;
     margin-right: 11px;
   }
+  .nav {
+    justify-content: space-between;
+  }
+  .ele {
+    font-size: 22px;
+    margin-right: 0px;
+    padding: 8px 6px;
+    margin-left: 0px;
+    margin: 0px auto;
+  }
+}
+
+//Finish page
+
+.finish-container {
+  width: 716px;
+  height: 653px;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0) 0%,
+    rgba(0, 0, 0, 0.19) 57.49%,
+    #000000 100%
+  );
+  margin: auto;
+  .finish-heading {
+    text-align: center;
+    width: 697px;
+    height: 156px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 78px;
+    background: linear-gradient(93.31deg, #8e15e4 0%, #f3ea14 100.9%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-top: 72px;
+  }
+  .finish-paragraph {
+    width: 550px;
+    height: 37px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    color: #a046e0;
+    margin-left: 153px;
+    margin-top: 100px;
+  }
+  .finish-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+  }
+  .finish-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+    width: 170.43px;
+    height: 57px;
+    margin: 0px auto;
+    .image-finish{
+      margin-right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .finish-page{
+    width: 100%;
+    margin: auto;
+  .finish-container{
+    width: 95%;
+    margin: 0px auto;
+    height: 628px;
+    .finish-heading{
+      width: 96%;
+    }
+    .finish-paragraph{
+      font-size: 153%;
+      // margin-left: 27px;
+      // width: 0px;
+      margin: 0px auto;
+      width: 323px;
+    }
+    .finish-link{
+      margin-top: 45px;
+      display: flex;
+      flex-direction: column;
+      .image2-finish{
+        margin-top: 12%;
+        margin-right: 7px;
+      }
+    }
+  }
+}
 }
