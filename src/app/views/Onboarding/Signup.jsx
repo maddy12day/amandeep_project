@@ -2,29 +2,19 @@ import Icon from "../../assets/images/icon.png";
 import Line from "../../assets/images/Line.png";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
-import * as defaultService from "../../services/default"
 
-const Signup = ({ childToParent }) => {
-  //
-  // Code validate
-  //
+const Signup = () => {
   let navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [userInfo, setUserInfo] = useState();
+
   const onSubmit = (data) => {
-    setUserInfo(data);
-    console.log(data)
-    navigate("/verify",{code : data.code });
-    // childToParent(data)
+    navigate("/verify/" + data.code);
   };
-
-  //otp post
-
 
   return (
     <>
