@@ -6,6 +6,9 @@ import Link from "../assets/images/link.png";
 import Facebook from "../assets/images/facebook.png";
 
 const Footer = () => {
+  const openlink=(url)=>{
+    window.open(url, '_blank');
+  }
   return (
     <>
       <div className="col-md-12 row footer-container">
@@ -16,40 +19,43 @@ const Footer = () => {
           <ul className="d-flex justify-content-md-around justify-content-start flex-column  flex-md-row align-items-center">
           <div className="footer-list">
             <li>
-              <a className="text" href="#">
+              <a className="text" href="https://gofanclub.com/terms-and-conditions" target={'_blank'}rel="noreferrer">
                 Terms
               </a>
             </li>
             <li>
-              <a className="text" href="#">
+              <a className="text" href="https://gofanclub.com/privacypolicy" target={'_blank'}
+              rel="noreferrer">
                 Privacy
               </a>
             </li>
-            <li>
+            {/* <li>
               <a className="text" href="#">
                 FAQs
               </a>
-            </li>
+            </li> */}
             <li>
-              <a className="text" href="#">
+              <a className="text" href="mailto:support@gofanclub.com;">
                 Contact
               </a>
             </li>
             <li>
-              <a className="text" href="#">
+              <a className="text" href="https://gofanclub.com/about-us" target={'_blank'}
+              rel="noreferrer" >
                 About us
               </a>
             </li>
             <li>
-              <a className="text" href="#">
+              <a className="text" href="https://gofanclub.com/nft" target={'_blank'}
+              rel='noreferrer'>
                 NFTs
               </a>
             </li>
-            <li>
+            {/* <li>
               <a className="text" href="#">
                 Press inquiries
               </a>
-            </li>
+            </li> */}
             </div>
             <li>
             <div className="footer-btn">
@@ -71,6 +77,7 @@ const Footer = () => {
                   type="image/png"
                   alt="img"
                   className="img"
+                  onClick={()=>openlink('https://www.facebook.com/FanClubtheapp')}
                 />
                 <img
                   src={Twitter}
@@ -79,6 +86,7 @@ const Footer = () => {
                   type="image/png"
                   alt="img"
                   className="img"
+                  onClick={()=>openlink('https://twitter.com/FanClubapp_')}
                 />
               </div>
             </div>
@@ -91,6 +99,7 @@ const Footer = () => {
                   type="image/png"
                   alt="img"
                   className="img"
+                  onClick={()=>openlink(' https://www.instagram.com/fanclubapp_/')}
                 />
                 <img
                   src={Link}
@@ -99,6 +108,7 @@ const Footer = () => {
                   type="image/png"
                   alt="img"
                   className="img"
+                  onClick={()=>openlink(' https://www.linkedin.com/company/fanclub/')}
                 />
               </div>
             </div>
