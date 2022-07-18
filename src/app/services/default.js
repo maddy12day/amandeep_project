@@ -1,5 +1,5 @@
 import { handleApi } from "../utils/utils";
-import axiosClient from "../utils/request";
+import axiosClient from "../utils/Request";
 
 
 export  async function signUp (data) {

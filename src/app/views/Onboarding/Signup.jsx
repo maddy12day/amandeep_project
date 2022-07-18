@@ -1,7 +1,7 @@
 import Icon from "../../assets/images/icon.png";
-import Line from "../../assets/images/Line.png";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import * as defaultService from "../../services/default";
 
 const Signup = () => {
   let navigate = useNavigate();
@@ -10,11 +10,26 @@ const Signup = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm(
+    {
+      mode : 'all'
+    }
+  );
 
   const onSubmit = (data) => {
+    sendCode(data)
     navigate("/verify/" + data.code);
   };
+
+  // console.log(errors)
+
+  const sendCode = (data) => {
+    defaultService.signUp(data).then((response) => {
+      if (response) {
+        console.log(response);
+      }
+    });
+  }
 
   return (
     <>
@@ -23,7 +38,7 @@ const Signup = () => {
           <div>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="title">Sign Up</div>
-              <div>
+              <div className="line" style={{ "border-bottom" : errors.code?.message ? '1px solid red' : '' }}>
                 <img src={Icon} alt="Icon" className="symb" />
                 <input
                   type="text"
@@ -34,9 +49,6 @@ const Signup = () => {
                     required: "Invite Code is required",
                   })}
                 />
-              </div>
-              <div>
-                <img src={Line} alt="line" />
               </div>
               <p id="error">{errors.code?.message}</p>
               <div className="verify-button">

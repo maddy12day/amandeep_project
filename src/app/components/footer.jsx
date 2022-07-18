@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
         <div className="col-md-8 col-sm-12">
           <ul className="d-flex justify-content-md-around justify-content-start flex-column  flex-md-row align-items-center">
-          <div className="footer-list">
+          <div className="footer-list list-footer">
             <li>
               <a className="text" href="#">
                 Terms

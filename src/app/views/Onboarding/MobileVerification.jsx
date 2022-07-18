@@ -4,7 +4,7 @@ import Frame from "../../assets/images/Frame.png";
 import Arrow from "../../assets/images/arrow-left.png";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import * as defaultService from "../../services/default";
 import { isValidNumber } from "libphonenumber-js";
 import PhoneInput from "react-phone-input-2";
@@ -34,14 +34,16 @@ const MobileVerification = (props) => {
     sendData(data);
   };
 
+  let navigate = useNavigate()
   const onSubmit = (data) => {
-    // navigate("/profile");
     data.code = formValues.code;
     data.mobile = formValues.mobile;
     sendData(data);
+    navigate("/profile");
   };
 
   const sendData = (data) => {
+    console.log(data)
     defaultService.signUp(data).then((response) => {
       if (response) {
         console.log(response);
@@ -59,7 +61,7 @@ const MobileVerification = (props) => {
           <form onSubmit={handleSubmit2(onSub)}>
             <div>
               <div className="title">Sign Up</div>
-              <div className="d-flex justify-content-center ">
+              <div className="d-flex justify-content-center line">
                 <img src={Icon} alt="Icon" />
                 <Controller
                     control={control}
@@ -71,15 +73,12 @@ const MobileVerification = (props) => {
                       <PhoneInput
                         name={name}
                         placeholder={'Mobile Number'}
-                        country={"us"}
+                        country={"in"}
                         value={value}
                         onChange={(e) => onChange('+'+e)}
                       />
                     )}
                   />
-              </div>
-              <div>
-                <img src={Line} alt="line" className="image-signup" />
               </div>
               <p id="error">
               {errors2.mobile?.type === 'required' && 'Mobile number is required.'}
@@ -102,7 +101,7 @@ const MobileVerification = (props) => {
                 id="arrow"
               />
               <div className="title">Sign Up</div>
-              <div className="d-flex justify-content-center ">
+              <div className="d-flex justify-content-center line">
                 <img src={Frame} alt="Icon" />
                 <input
                   type="number"
@@ -113,9 +112,6 @@ const MobileVerification = (props) => {
                     required: "OTP is required",
                   })}
                 />
-              </div>
-              <div>
-                <img src={Line} alt="line" className="image-signup" />
               </div>
               <p id="error">{errors.abc?.message}</p>
               <p style={{ display: flag2 ? "flex" : "none" }} id="resend">
