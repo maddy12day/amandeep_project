@@ -60,7 +60,7 @@ const MobileVerification = (props) => {
             <div>
               <div className="title">Sign Up</div>
               <div className="d-flex justify-content-center ">
-                <img src={Icon} alt="Icon" />
+                <img src={Icon} alt="Icon" className="mobile-icon" />
                 <Controller
                     control={control}
                     name="mobile"
@@ -100,10 +100,11 @@ const MobileVerification = (props) => {
                 onClick={() => setFlag(false)}
                 alt="test"
                 id="arrow"
+                className="arrow-mobile"
               />
               <div className="title">Sign Up</div>
               <div className="d-flex justify-content-center ">
-                <img src={Frame} alt="Icon" />
+                <img src={Frame} alt="Icon" className="otp-icon"/>
                 <input
                   type="number"
                   name="otp"

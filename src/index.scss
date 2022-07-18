@@ -598,6 +598,7 @@ input[type="radio"]:checked + label::before {
   }
   .verify-button {
     margin-right: 12px;
+    margin-top: 18%;
   }
   .icon {
     margin: auto;
@@ -632,6 +633,16 @@ input[type="radio"]:checked + label::before {
     padding: 8px 6px;
     margin-left: 0px;
     margin: 0px auto;
+  }
+  .mobile-icon{
+    margin-left: 22%;
+  }
+  .otp-icon{
+    margin-left: 52px;
+    height: 31px;
+  }
+  .arrow-mobile{
+    margin-left: 27px;
   }
 }
 
