@@ -389,6 +389,10 @@ ul {
   padding-right: 99px;
 }
 
+.footer-list{
+  display: flex;
+}
+
 .button-f {
   background: linear-gradient(85.56deg, #a046e0 6.02%, #f4e900 161.61%);
   color: #ffffff;
@@ -622,6 +626,8 @@ input[type="radio"]:checked + label::before {
     margin-top: 18px;
   }
   .footer-list{
+    display: flex;
+    flex-direction: column;
     line-height: 37px;
     margin-bottom: 16px;
     font-size: 13px;
