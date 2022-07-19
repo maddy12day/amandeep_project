@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="col-md-2 col-sm-12 d-flex justify-content-center align-items-center logo">
           <img src={Logo} alt="img" />
         </div>
-        <div className="col-md-8 col-sm-12">
+        <div className="col-md-8 col-sm-12 p-0">
           <ul className="d-flex justify-content-md-around justify-content-start flex-column  flex-md-row align-items-center">
           <div className="footer-list">
             <li>
