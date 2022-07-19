@@ -343,17 +343,21 @@ button {
   margin-bottom: 3rem;
   margin-right: 40rem;
 }
-#error {
-  color: red;
+.error{
+  color: #9D9D9D;
   display: flex;
-  justify-content: center;
+  justify-content: end;
 }
 #code {
   color: #777676;
   font-size: 1.5rem;
   text-indent: 6px;
 }
-.symb {
+.line{
+  border-bottom: 1px solid #BEBEBE;
+  width: 30rem;
+}
+.symb{
   margin-bottom: 11px;
 }
 
@@ -382,6 +386,10 @@ ul {
 .footer-container {
   padding-left: 99px;
   padding-right: 99px;
+}
+
+.footer-list{
+  display: flex;
 }
 
 .button-f {
@@ -619,7 +627,9 @@ input[type="radio"]:checked + label::before {
     margin-right: 24px;
     margin-top: 18px;
   }
-  .footer-list {
+  .footer-list{
+    display: flex;
+    flex-direction: column;
     line-height: 37px;
     margin-bottom: 16px;
     font-size: 13px;
