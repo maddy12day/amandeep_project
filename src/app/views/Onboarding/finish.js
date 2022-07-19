@@ -18,7 +18,9 @@ const Finish=()=>{
         </div>
         <div className='finish-link'>
         <img src={Store} alt='arrow' className='image-finish'/>
-        <img src={Store1} alt='arrow' className='image2-finish'/>  
+        <a href='https://apps.apple.com/us/app/fanclub/id1535897256'>
+        <img src={Store1} alt='arrow' className='image2-finish'/>
+        </a>  
         </div>
       </div>
       </div>

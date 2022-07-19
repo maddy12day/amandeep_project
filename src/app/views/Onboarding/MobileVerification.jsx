@@ -26,7 +26,7 @@ const MobileVerification = (props) => {
   });
 
   const [formValues, setFormValues] = useState(null);
-  const [flag, setFlag] = useState(false);
+  const [flag, setFlag] = useState(true);
   const [flag2, setFlag2] = useState(true);
   const [flag3, setFlag3] = useState(false);
 
@@ -73,7 +73,7 @@ const MobileVerification = (props) => {
                   "border-bottom": errors.code?.message || flag3 ? "1px solid red" : "",
                 }}
               >
-                <img src={Icon} alt="Icon" />
+                <img src={Icon} alt="Icon" className="mobile-icon" />
                 <Controller
                   control={control}
                   name="mobile"
@@ -120,7 +120,7 @@ const MobileVerification = (props) => {
               />
               <div className="title">Sign Up</div>
               <div className="d-flex justify-content-center line">
-                <img src={Frame} alt="Icon" />
+                <img src={Frame} alt="Icon" className="frame-icon"/>
                 <input
                   type="number"
                   name="otp"

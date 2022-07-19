@@ -4,20 +4,23 @@ import Insta from "../assets/images/insta.png";
 import Twitter from "../assets/images/twitter.png";
 import Link from "../assets/images/link.png";
 import Facebook from "../assets/images/facebook.png";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const openlink=(url)=>{
     window.open(url, '_blank');
   }
+  let navigate = useNavigate();
   return (
     <>
       <div className="col-md-12 row footer-container">
         <div className="col-md-2 col-sm-12 d-flex justify-content-center align-items-center logo">
-          <img src={Logo} alt="img" />
+          <img src={Logo} alt="img"  className="logo-image"
+            onClick={() => {navigate("/")}}
+          />
         </div>
         <div className="col-md-8 col-sm-12 p-0">
           <ul className="d-flex justify-content-md-around justify-content-start flex-column  flex-md-row align-items-center">
-          <div className="footer-list">
             <li>
               <a className="text" href="https://gofanclub.com/terms-and-conditions" target={'_blank'}rel="noreferrer">
                 Terms
@@ -56,17 +59,17 @@ const Footer = () => {
                 Press inquiries
               </a>
             </li> */}
-            </div>
             <li>
             <div className="footer-btn">
-              <a className="text button-f" href="#">
+              <a className="text button-f" href="https://apps.apple.com/us/app/fanclub/id1535897256"
+              target={'_blank'} rel="noreferrer" >
                 Get App
               </a>
               </div>
             </li>
           </ul>
         </div>
-        <div className="col-md-2 col-sm-12 d-flex justify-content-center align-items-center">
+        <div className="col-md-2 col-sm-12 d-flex justify-content-center align-items-center social-links">
           <div className="col">
             <div className="d-flex justify-content-around">
               <div>
