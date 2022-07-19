@@ -26,7 +26,7 @@ const MobileVerification = (props) => {
   });
 
   const [formValues, setFormValues] = useState(null);
-  const [flag, setFlag] = useState(true);
+  const [flag, setFlag] = useState(false);
   const [flag2, setFlag2] = useState(true);
   const [flag3, setFlag3] = useState(false);
 
