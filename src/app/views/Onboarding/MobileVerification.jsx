@@ -4,7 +4,7 @@ import Frame from "../../assets/images/Frame.png";
 import Arrow from "../../assets/images/arrow-left.png";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import * as defaultService from "../../services/default";
 import { isValidNumber } from "libphonenumber-js";
 import PhoneInput from "react-phone-input-2";
@@ -21,36 +21,44 @@ const MobileVerification = (props) => {
     control,
     formState: { errors: errors2 },
     handleSubmit: handleSubmit2,
-  } = useForm();
- 
-  const [formValues , setFormValues] = useState(null);
+  } = useForm({
+    mode: "all",
+  });
+
+  const [formValues, setFormValues] = useState(null);
   const [flag, setFlag] = useState(false);
   const [flag2, setFlag2] = useState(true);
-
+  const [flag3, setFlag3] = useState(false);
 
   const onSub = (data) => {
     data.code = code;
     setFormValues(data);
     sendData(data);
+    // navigate("/profile");
   };
 
+  let navigate = useNavigate();
   const onSubmit = (data) => {
-    // navigate("/profile");
     data.code = formValues.code;
     data.mobile = formValues.mobile;
-    sendData(data);
+    // sendData(data);
+    setFlag(true);
   };
 
   const sendData = (data) => {
+    console.log(data);
     defaultService.signUp(data).then((response) => {
-      if (response) {
+      if (response.success) {
         console.log(response);
-        if(data.mobile){
+        if (data.mobile) {
           setFlag(true);
         }
+      } else if (response.error) {
+        console.log(response);
+        setFlag3(true);
       }
     });
-  }
+  };
 
   return (
     <section className="main">
@@ -59,32 +67,40 @@ const MobileVerification = (props) => {
           <form onSubmit={handleSubmit2(onSub)}>
             <div>
               <div className="title">Sign Up</div>
-              <div className="d-flex justify-content-center ">
-                <img src={Icon} alt="Icon" className="mobile-icon" />
+              <div
+                className="d-flex justify-content-center line"
+                style={{
+                  "border-bottom": errors.code?.message || flag3 ? "1px solid red" : "",
+                }}
+              >
+                <img src={Icon} alt="Icon" />
                 <Controller
-                    control={control}
-                    name="mobile"
-                    rules={{required : 'Mobile number is required.' , validate : isValidNumber }}
-                    render={({
-                      field: { onChange, onBlur, value, name, ref },
-                    }) => (
-                      <PhoneInput
-                        name={name}
-                        placeholder={'Mobile Number'}
-                        country={"us"}
-                        value={value}
-                        onChange={(e) => onChange('+'+e)}
-                      />
-                    )}
-                  />
+                  control={control}
+                  name="mobile"
+                  rules={{
+                    required: "Mobile number is required.",
+                    validate: isValidNumber,
+                  }}
+                  render={({
+                    field: { onChange, onBlur, value, name, ref },
+                  }) => (
+                    <PhoneInput
+                      name={name}
+                      placeholder={"Mobile Number"}
+                      country={"in"}
+                      value={value}
+                      onChange={(e) => onChange("+" + e)}
+                    />
+                  )}
+                />
               </div>
-              <div>
-                <img src={Line} alt="line" className="image-signup" />
-              </div>
-              <p id="error">
-              {errors2.mobile?.type === 'required' && 'Mobile number is required.'}
-              {errors2.mobile?.type === 'validate' && 'Mobile number is not valid.'}
+              <p className="error">
+                {errors2.mobile?.type === "required" &&
+                  "Mobile number is required."}
+                {errors2.mobile?.type === "validate" &&
+                  "Mobile number is not valid."}
               </p>
+              {flag3 && <div className="error">Invalid Mobile Number</div>}
               <div className="verify-button">
                 <button type="submit">Continue</button>
               </div>
@@ -103,8 +119,8 @@ const MobileVerification = (props) => {
                 className="arrow-mobile"
               />
               <div className="title">Sign Up</div>
-              <div className="d-flex justify-content-center ">
-                <img src={Frame} alt="Icon" className="otp-icon"/>
+              <div className="d-flex justify-content-center line">
+                <img src={Frame} alt="Icon" />
                 <input
                   type="number"
                   name="otp"
@@ -114,9 +130,6 @@ const MobileVerification = (props) => {
                     required: "OTP is required",
                   })}
                 />
-              </div>
-              <div>
-                <img src={Line} alt="line" className="image-signup" />
               </div>
               <p id="error">{errors.abc?.message}</p>
               <p style={{ display: flag2 ? "flex" : "none" }} id="resend">
