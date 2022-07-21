@@ -851,7 +851,8 @@ input[type="radio"]:checked + label::before {
     white-space: nowrap;
     list-style: none; 
     padding-left: 0px; 
-    margin-bottom: 0px; 
+    margin-bottom: 0px;
+    margin-left: 86px; 
   }
   .finish-heading{
     margin-left: 20px;
