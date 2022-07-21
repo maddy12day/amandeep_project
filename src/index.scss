@@ -534,7 +534,7 @@ input[type="radio"]:checked + label::before {
   border: 2px solid #a046e0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .con {
     width: 100%;
     margin: auto;
@@ -581,7 +581,7 @@ input[type="radio"]:checked + label::before {
     }
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .thirdstep-container {
     .thirdstep-paragraph p {
       font-size: 8px;
@@ -598,7 +598,7 @@ input[type="radio"]:checked + label::before {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .sub-main {
     width: 20rem;
     height: 41rem;
@@ -765,7 +765,7 @@ input[type="radio"]:checked + label::before {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .finish-page{
     width: 100%;
     margin: auto;
@@ -775,6 +775,7 @@ input[type="radio"]:checked + label::before {
     height: 628px;
     .finish-heading{
       width: 96%;
+      margin-left: 20px;
     }
     .finish-paragraph{
       font-size: 153%;
@@ -830,3 +831,42 @@ input[type="radio"]:checked + label::before {
 .react-tel-input .selected-flag .flag {
   transform: scale(1.4);
 }
+
+// For ipad - media query
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .col{
+    display: flex;
+  }
+  .footer-btn{
+    margin-bottom: 3px;
+  }
+  ul{
+    white-space: nowrap;
+    list-style: none; 
+    padding-left: 0px; 
+    margin-bottom: 0px; 
+  }
+  .finish-heading{
+    margin-left: 20px;
+  }
+  .logo-image{
+    margin-right: 100px;
+  }
+  .icon{
+    margin: auto;
+    display: block;
+  }
+  .custom-contact{
+    margin: 0px auto;
+  }
+  .social-links{
+    margin-top: 35px;
+  }
+ }
