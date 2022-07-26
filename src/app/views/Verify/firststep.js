@@ -2,6 +2,7 @@ import Select from "../../components/forms/select";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { userschema } from "../../utils/Validaton";
+import Input from "../../components/forms/input";
 const FirstStep = ({stepCount})=>{
 
   const { register, handleSubmit, formState: { errors } } = useForm({
@@ -16,17 +17,39 @@ const FirstStep = ({stepCount})=>{
     <>
     <form onSubmit={handleSubmit(onSubmitHandler)}>
     <div className="profile-select">
-    <Select selectClass={"start-select"} dataArr={[{label:'option 1',value:'option1'},{label:'option 2',value:'option2'}]} 
+    {/* <Select selectClass={"start-select"} dataArr={[{label:'option 1',value:'option1'},{label:'option 2',value:'option2'}]} 
     name='option'
      {...register('option')}
      
     />
     <p className="error1">{errors.option?.message}</p>
-    </div>
-    <div className="profile-paragraph">
+    </div> */}
+    <div className="secondstep-input">
+        <Input type={"text"} placeholder={"Full Name"} name={"title"}
+           inputClass={"start-input"} imgSrc={""}
+            {...register('title')}
+           />
+           <p className="error1">{errors.title?.message}</p>
+      </div>
+      <div className="secondstep-input">
+        <Input type={"text"} placeholder={"Username"} name={"title"}
+           inputClass={"start-input"} imgSrc={""}
+            {...register('title')}
+           />
+           <p className="error1">{errors.title?.message}</p>
+      </div>
+      <div className="secondstep-input">
+        <Input type={"text"} placeholder={"Date of birth"} name={"title"}
+           inputClass={"start-input"} imgSrc={""}
+            {...register('title')}
+           />
+           <p className="error1">{errors.title?.message}</p>
+      </div>
+      </div>
+    {/* <div className="profile-paragraph">
       <p>Add display name (optional)</p>
-    </div>
-    <div className="form-container">
+    </div> */}
+    {/* <div className="form-container">
       <div className="form-radio">
       <input type="radio" id="user" name="display_name" value="username"/>
       <label htmlFor="user">Username</label>
@@ -39,7 +62,7 @@ const FirstStep = ({stepCount})=>{
       <input type="radio" id="show" name="display_name" value="showname"/>
       <label htmlFor="show">Show Name</label>
       </div>
-     </div>
+     </div> */}
      <button className="profile-btn" type="submit" >Continue
      </button>
      </form>

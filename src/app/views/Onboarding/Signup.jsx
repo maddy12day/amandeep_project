@@ -64,6 +64,9 @@ const Signup = () => {
                   style={{ color: errors.code?.message ? "red" : "" }}
                 />
               </div>
+              <div className="pargraph-signup">
+              {errors.code?.message ? <p className="code-para">The code is incorect</p> :  <p className="para-signup"><span className="span-signup">Please enter code above.</span>Invite code can be only used once</p> }
+              </div>
               {/* <p id="error">{errors.code?.message}</p> */}
               { errors.code?.type === "required" && (
                 <div className="error">{errors.code?.message}</div>
@@ -76,8 +79,9 @@ const Signup = () => {
                 <button>Verify</button>
               </div>
               <div className="para">
-                <p>If you don't have invite code you can ask for a </p>
-                <p>refferal from any current fanClub user</p>
+              {errors.code?.message ? <p className="msg-para">I don't have a invite code</p> : <div><p>If you don't have invite code you can ask for a 
+                <p>refferal from any current fanClub user</p></p></div>}
+                
               </div>
             </form>
           </div>

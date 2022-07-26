@@ -12,7 +12,7 @@ const SecondStep=({stepCount})=>{
 
   const onSubmitHandler = (data) => {
     console.log({ data });
-    stepCount(3);
+    
   };
   return(
     <>
@@ -27,11 +27,18 @@ const SecondStep=({stepCount})=>{
          <p className="error1">{errors.option?.message}</p>
       </div>
       <div className="secondstep-input">
-        <Input type={"text"} placeholder={"Enter invite code"} name={"title"}
+        <Input type={"text"} placeholder={"Country"} name={"title"}
            inputClass={"start-input"} imgSrc={""}
             {...register('title')}
            />
            <p className="error1">{errors.title?.message}</p>
+      </div>
+      <div className="secondstep-input">
+        <Input type={"text"} placeholder={"Email"} name={"email"}
+           inputClass={"start-input"} imgSrc={""}
+            {...register('email')}
+           />
+           <p className="error1">{errors.email?.message}</p>
       </div>
       <button className="profile-btn" type="submit" >Continue
      </button>
