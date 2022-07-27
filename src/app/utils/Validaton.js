@@ -7,7 +7,7 @@ export const userschema = yup.object().shape({
 
 export const userschema1 = yup.object().shape({
   option: yup.string().required(),
-  title: yup.string().required(),
+  country: yup.string().required(),
   email: yup.string().required(),
 });
 

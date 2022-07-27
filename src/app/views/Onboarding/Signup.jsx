@@ -65,23 +65,22 @@ const Signup = () => {
                 />
               </div>
               <div className="pargraph-signup">
-              {errors.code?.message ? <p className="code-para">The code is incorect</p> :  <p className="para-signup"><span className="span-signup">Please enter code above.</span>Invite code can be only used once</p> }
+              {errors.code?.message ||flag ? " " : <p className="para-signup"><span className="span-signup">Please enter code above.</span>Invite code can be only used once</p>}
               </div>
               {/* <p id="error">{errors.code?.message}</p> */}
-              { errors.code?.type === "required" && (
-                <div className="error">{errors.code?.message}</div>
+              { errors.code?.message  && (
+                <div className="error text-start">{errors.code?.message}</div>
               )}
-              { errors.code?.type === "minLength" && (
+              {/* { errors.code?.type === "minLength" && (
                 <div className="error">{errors.code?.message}</div>
-              )}
+              )} */}
               {flag && (<div className="error">The code is incorrect</div>)}
               <div className="verify-button">
                 <button>Verify</button>
               </div>
               <div className="para">
-              {errors.code?.message ? <p className="msg-para">I don't have a invite code</p> : <div><p>If you don't have invite code you can ask for a 
+              {errors.code?.message || flag ? <p className="msg-para">I don't have a invite code</p> : <div><p>If you don't have invite code you can ask for a 
                 <p>refferal from any current fanClub user</p></p></div>}
-                
               </div>
             </form>
           </div>

@@ -10,7 +10,7 @@ const Select =React.forwardRef(({selectClass,dataArr,name,placeholder,...rest}, 
           <option key={'option-'+ i} value={item.value}>{item.label}</option>
          ))}
          </select> 
-         <spam className='custom-arrow'></spam>
+         <span className='custom-arrow'></span>
       </div>
     </>
   );
