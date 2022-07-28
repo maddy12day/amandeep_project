@@ -5,13 +5,13 @@
   border-bottom: 1px solid #bebebe;
   width: 492px;
   margin: auto;
-  margin-left: 126px;
+  margin: 0px auto;
   .input-container {
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 28%;
+    // margin-left: 28%;
   }
   .start-input {
     border: none;
@@ -25,6 +25,7 @@
     background: transparent;
     // margin-right: 58px;
     margin: 0px auto;
+    text-align: center;
   }
   .error-input {
     color: red;
@@ -52,7 +53,7 @@
     outline: none;
     background: transparent;
    cursor:pointer;
-   margin-left: 27px;
+  //  margin-left: 27px;
   //  margin: 0px auto;
     box-shadow: 0 10px 25px rgba(0,0,0,0)
     
@@ -63,7 +64,7 @@
 .custom-arrow{
   position: absolute;
   top: 0px;
-    right: 78px;
+    right: 89px;
   display: block;
   // background: #3b3c47;
   height: 100%;
@@ -101,6 +102,11 @@
 option{
   background:#404040 ;
 }
+::-webkit-calendar-picker-indicator {
+    filter: invert(47%) sepia(0%) saturate(303%) hue-rotate(134deg) brightness(95%) contrast(70%);
+    
+  }
+
 
 
 @media screen and (max-width: 768px){
@@ -130,4 +136,5 @@ option{
     }
   }
 }
+
 

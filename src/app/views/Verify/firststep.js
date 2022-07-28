@@ -27,23 +27,23 @@ const FirstStep = ({stepCount})=>{
     <div className="secondstep-input">
         <Input type={"text"} placeholder={"Full Name"} name={"title"}
            inputClass={"start-input"} imgSrc={""}
-            {...register('title')}
+            {...register('Fullname')}
            />
-           <p className="error1">{errors.title?.message}</p>
+           <p className="error1">{errors.Fullname?.message}</p>
       </div>
       <div className="secondstep-input">
         <Input type={"text"} placeholder={"Username"} name={"title"}
            inputClass={"start-input"} imgSrc={""}
-            {...register('title')}
+            {...register('Username')}
            />
-           <p className="error1">{errors.title?.message}</p>
+           <p className="error1">{errors.Username?.message}</p>
       </div>
       <div className="secondstep-input">
-        <Input type={"text"} placeholder={"Date of birth"} name={"title"}
+        <Input type={"date"} placeholder={"Date of birth"} name={"title"}
            inputClass={"start-input"} imgSrc={""}
-            {...register('title')}
+            {...register('date')}
            />
-           <p className="error1">{errors.title?.message}</p>
+           <p className="error1">{errors.date?.message}</p>
       </div>
       </div>
     {/* <div className="profile-paragraph">

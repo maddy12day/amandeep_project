@@ -2,7 +2,9 @@ import * as yup from "yup";
 
 export const userschema = yup.object().shape({
   // option: yup.string().required(),
-  title: yup.string().required(),
+  Fullname: yup.string().required(),
+  date: yup.string().required(),
+  Username: yup.string().required(),
 });
 
 export const userschema1 = yup.object().shape({

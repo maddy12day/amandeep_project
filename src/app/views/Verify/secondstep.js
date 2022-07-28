@@ -67,8 +67,8 @@ const SecondStep=({stepCount})=>{
          <p className="error1">{errors.country?.message}</p>
       </div>
       <div className="secondstep-input">
-        <Input type={"text"} placeholder={"Email"} name={"email"}
-           inputClass={"start-input"} imgSrc={""}
+        <Input type={"email"} placeholder={"Email"} name={"email"}
+           inputClass={"start-input"}  
             {...register('email')}
            />
            <p className="error1">{errors.email?.message}</p>
