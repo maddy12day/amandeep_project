@@ -1,11 +1,11 @@
-import Select from "../../components/forms/select";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { userschema } from "../../utils/Validaton";
 import Input from "../../components/forms/input";
+import { useState } from "react";
 const FirstStep = ({stepCount})=>{
 
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit, watch, formState: { errors } } = useForm({
         resolver: yupResolver(userschema),
       });
 
@@ -13,6 +13,13 @@ const FirstStep = ({stepCount})=>{
         console.log({ data });
         stepCount(2);
       };
+     
+    const Fullname=watch('Fullname')
+    const Username=watch('Username')
+    const date=watch('date')
+
+   const isValid=Fullname && Username && date
+
   return(
     <>
     <form onSubmit={handleSubmit(onSubmitHandler)}>
@@ -39,10 +46,14 @@ const FirstStep = ({stepCount})=>{
            <p className="error1">{errors.Username?.message}</p>
       </div>
       <div className="secondstep-input">
-        <Input type={"date"} placeholder={"Date of birth"} name={"title"}
-           inputClass={"start-input"} imgSrc={""}
-            {...register('date')}
-           />
+        <Input type={'text'} placeholder={"Birthday Date"} name={"date"}
+           inputClass={"start-input"} 
+           onChange={(e) => console.log(e.target.value)}
+        onFocus={(e) => {(e.target.type = "date");e.target.showPicker()}}
+        // onBlur={(e) => (e.target.type = "text")}
+        
+            {...register('date')}  
+            />
            <p className="error1">{errors.date?.message}</p>
       </div>
       </div>
@@ -63,7 +74,7 @@ const FirstStep = ({stepCount})=>{
       <label htmlFor="show">Show Name</label>
       </div>
      </div> */}
-     <button className="profile-btn" type="submit" >Continue
+     <button className="profile-btn" type="submit"  disabled={!isValid}>Continue
      </button>
      </form>
     </>

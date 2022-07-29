@@ -10,18 +10,26 @@ const Signup = () => {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm({
     mode: "all",
   });
 
-  const [flag, setFlag] = useState(false)
+  const [flag, setFlag] = useState(false);
   const onSubmit = (data) => {
     sendCode(data);
     // navigate("/verify/" + data.code);
   };
 
-  // console.log(errors)
+  // watch events
+  
+ 
+  
+ 
+  // const isValid=code;
+
+  
 
   const sendCode = (data) => {
     defaultService.signUp(data).then((response) => {
@@ -29,12 +37,23 @@ const Signup = () => {
         console.log(response);
         navigate("/verify/" + data.code);
       } else if (response.error) {
-        console.log(response.message)
-        setFlag(true)
+        console.log(response.message);
+        setFlag(true);
       }
     });
   };
-
+ 
+  // const[disabled,setDisabled]=useState(true);
+   
+  // const handleChange=(e)=>{
+  //   if(e.target.value.length >=6){
+  //     setDisabled(false);
+  //   }
+  //   if(e.target.value.length <6){
+  //     setDisabled(true);
+  //   }
+  // }
+ 
   return (
     <>
       <section className="main">
@@ -50,6 +69,7 @@ const Signup = () => {
               >
                 <img src={Icon} alt="Icon" className="symb" />
                 <input
+                className="mandatoryfields"
                   type="text"
                   name="abc"
                   id="code"
@@ -62,25 +82,43 @@ const Signup = () => {
                     },
                   })}
                   style={{ color: errors.code?.message ? "red" : "" }}
+                  // onChange={handleChange}
                 />
               </div>
               <div className="pargraph-signup">
-              {errors.code?.message ||flag ? " " : <p className="para-signup"><span className="span-signup">Please enter code above.</span>Invite code can be only used once</p>}
+                {errors.code?.message || flag ? (
+                  " "
+                ) : (
+                  <p className="para-signup">
+                    <span className="span-signup">
+                      Please enter code above.
+                    </span>
+                    Invite code can be only used once
+                  </p>
+                )}
               </div>
               {/* <p id="error">{errors.code?.message}</p> */}
-              { errors.code?.message  && (
+              {errors.code?.message && (
                 <div className="error text-start">{errors.code?.message}</div>
               )}
               {/* { errors.code?.type === "minLength" && (
                 <div className="error">{errors.code?.message}</div>
               )} */}
-              {flag && (<div className="error">The code is incorrect</div>)}
+              {flag && <div className="error">The code is incorrect</div>}
               <div className="verify-button">
-                <button>Verify</button>
+                <button className="btn1" disabled={ watch('code') === undefined || watch('code').length < 6 }>Verify</button>
               </div>
               <div className="para">
-              {errors.code?.message || flag ? <p className="msg-para">I don't have a invite code</p> : <div><p>If you don't have invite code you can ask for a 
-                <p>refferal from any current fanClub user</p></p></div>}
+                {errors.code?.message || flag ? (
+                  <p className="msg-para">I don't have a invite code</p>
+                ) : (
+                  <div>
+                    <p>
+                      If you don't have invite code you can ask for a
+                      <p>refferal from any current fanClub user</p>
+                    </p>
+                  </div>
+                )}
               </div>
             </form>
           </div>

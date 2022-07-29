@@ -10,7 +10,7 @@ import Country from "../../services/data";
 
 const SecondStep=({stepCount})=>{
 
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit,watch, formState: { errors } } = useForm({
     resolver: yupResolver(userschema1),
   });
 
@@ -48,6 +48,12 @@ const SecondStep=({stepCount})=>{
     })
   },[]); 
   
+   const option= watch('option')
+   const country=watch('country')
+   const email=watch('email')
+
+   const isValid=option && country && email
+
   return(
     <>
     <form onSubmit={handleSubmit(onSubmitHandler)}>
@@ -73,7 +79,7 @@ const SecondStep=({stepCount})=>{
            />
            <p className="error1">{errors.email?.message}</p>
       </div>
-      <button className="profile-btn" type="submit" >Continue
+      <button className="profile-btn" type="submit"  disabled={!isValid}>Continue
      </button>
       </div>
       </form>
