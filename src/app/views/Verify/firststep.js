@@ -19,7 +19,7 @@ const FirstStep = ({stepCount})=>{
     const date=watch('date')
 
    const isValid=Fullname && Username && date
-
+   console.log(errors);
   return(
     <>
     <form onSubmit={handleSubmit(onSubmitHandler)}>
@@ -41,7 +41,9 @@ const FirstStep = ({stepCount})=>{
       <div className="secondstep-input">
         <Input type={"text"} placeholder={"Username"} name={"title"}
            inputClass={"start-input"} imgSrc={""}
-            {...register('Username')}
+            {...register('Username',{
+             validate : (v) => /\s/g.test(v) 
+        })}
            />
            <p className="error1">{errors.Username?.message}</p>
       </div>
