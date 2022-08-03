@@ -5,6 +5,7 @@ import Profile from "./views/Verify/profile";
 import MobileVerification from"./views/Onboarding/MobileVerification"; 
 import { useState } from "react";
 import Finish from "./views/Onboarding/finish";
+import Early from "./views/Onboarding/early-acess";
 
 function App() {
   
@@ -21,6 +22,7 @@ function App() {
             <Route path="/verify/:code" element={<MobileVerification />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/finish" element={<Finish/>}/>
+            <Route path="/early-acess" element={<Early/>}/>
           </Routes>
         }
       />

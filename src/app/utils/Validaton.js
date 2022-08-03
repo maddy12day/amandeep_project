@@ -13,6 +13,12 @@ export const userschema1 = yup.object().shape({
   email: yup.string().required(),
 });
 
+export const userschema2 = yup.object().shape({
+  fullname: yup.string().required(),
+  email: yup.string().required(),
+  mobile: yup.string().required(),
+});
+
 
 // export const userschema2 = yup.object().shape({
 //   title: yup.string().required(),

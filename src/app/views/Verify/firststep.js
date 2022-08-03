@@ -42,7 +42,8 @@ const FirstStep = ({stepCount})=>{
         <Input type={"text"} placeholder={"Username"} name={"title"}
            inputClass={"start-input"} imgSrc={""}
             {...register('Username',{
-             validate : (v) => /\s/g.test(v) 
+              // required: "Username is required",
+             validate : (e) => (/\s/g.test(e)) 
         })}
            />
            <p className="error1">{errors.Username?.message}</p>

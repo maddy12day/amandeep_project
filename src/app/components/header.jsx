@@ -10,9 +10,9 @@ const Header = () => {
              onClick={() => {navigate("/")}}
         />
         </div>
-      <div className="nav">
+      {/* <div className="nav">
           <a href="mailto:support@gofanclub.com" className="button-h ele custom-contact">Contact</a>
-      </div>
+      </div> */}
 	</header> 
 </>
     )

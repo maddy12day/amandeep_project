@@ -13,7 +13,7 @@ const Footer = () => {
   let navigate = useNavigate();
   return (
     <>
-      <div className="col-md-12 row footer-container">
+      {/* <div className="col-md-12 row footer-container">
         <div className="col-md-2 col-sm-12 d-flex justify-content-center align-items-center logo">
           <img src={Logo} alt="img"  className="logo-image"
             onClick={() => {navigate("/")}}
@@ -31,13 +31,13 @@ const Footer = () => {
               rel="noreferrer">
                 Privacy
               </a>
-            </li>
+            </li> */}
             {/* <li>
               <a className="text" href="#">
                 FAQs
               </a>
             </li> */}
-            <li>
+            {/* <li>
               <a className="text" href="mailto:support@gofanclub.com;">
                 Contact
               </a>
@@ -53,13 +53,13 @@ const Footer = () => {
               rel='noreferrer'>
                 NFTs
               </a>
-            </li>
+            </li> */}
             {/* <li>
               <a className="text" href="#">
                 Press inquiries
               </a>
             </li> */}
-            <li>
+            {/* <li>
             <div className="footer-btn">
               <a className="text button-f" href="https://apps.apple.com/us/app/fanclub/id1535897256"
               target={'_blank'} rel="noreferrer" >
@@ -68,8 +68,8 @@ const Footer = () => {
               </div>
             </li>
           </ul>
-        </div>
-        <div className="col-md-2 col-sm-12 d-flex justify-content-center align-items-center social-links">
+        </div> */}
+        {/* <div className="col-md-2 col-sm-12 d-flex justify-content-center align-items-center social-links">
           <div className="col">
             <div className="d-flex justify-content-around">
               <div>
@@ -117,7 +117,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

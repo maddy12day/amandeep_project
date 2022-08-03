@@ -9,3 +9,7 @@ export  async function signUp (data) {
 export  async function accountTypes () {
     return await handleApi(axiosClient.get(`users/account_types/`))
 }
+
+export  async function early_access (data) {
+    return await handleApi(axiosClient.post(`early-access`, data))
+}

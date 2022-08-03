@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import * as defaultService from "../../services/default";
 import { useState } from "react";
 
+
 const Signup = () => {
   let navigate = useNavigate();
 
@@ -110,7 +111,7 @@ const Signup = () => {
               </div>
               <div className="para">
                 {errors.code?.message || flag ? (
-                  <p className="msg-para">I don't have a invite code</p>
+                  <p className="msg-para"  onClick={() => {navigate("/early-acess")}}>I don't have a invite code</p>
                 ) : (
                   <div>
                     <p>

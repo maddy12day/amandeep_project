@@ -411,6 +411,7 @@ button {
 
   color: #a046e0;
   margin-right: 6%;
+  cursor: pointer;
 }
 .symb {
   margin-bottom: 11px;
@@ -659,7 +660,7 @@ input[type="radio"]:checked + label::before {
   .span-signup {
     font-size: 13px;
   }
-  .code-para{
+  .code-para {
     margin-right: 52%;
   }
   #code {
@@ -938,3 +939,132 @@ input[type="radio"]:checked + label::before {
     font-size: 21px;
   }
 }
+
+// early acess page
+.early-main-container{
+.early-con {
+  width: 716px;
+  height: 653px;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0) 0%,
+    rgba(0, 0, 0, 0.19) 57.49%,
+    #000000 100%
+  );
+  margin: auto;
+}
+  .early-heading {
+    width: 697px;
+    height: 126px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 78px;
+    /* identical to box height */
+
+    background: linear-gradient(93.31deg, #234ef3 0%, #c913fc 100.9%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-align: center;
+    margin-top: 72px;
+  }
+  .early-input2{
+    margin-top: 8%;
+  }
+  .early-number{
+    margin-top: 8%;
+    width: 31rem;
+  }
+  .early-button{
+    margin-top: 15%;
+    .early-btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto
+    }
+  }
+}
+  
+// media query for early-acess-page
+
+@media screen and (max-width: 767px) {
+ .early-main-container{
+  width: 100%;
+  height: 640px;
+  margin: auto;
+  .early-con{
+    width: 90%;
+    margin: 0px auto;
+  }
+  .early-heading{
+    width: 97%;
+    margin: 0px auto;
+    margin-top: 31%;
+  }
+  .early-button{
+    margin-top: 30%;
+  }
+  .early-input2{
+    margin-top: 10%;
+  }
+  .early-input3{
+    margin-top: 10%;
+  }
+ }
+}
+
+// Submit page
+.submit-container{
+.submit-con{
+  width: 716px;
+  height: 653px;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0) 0%,
+    rgba(0, 0, 0, 0.19) 57.49%,
+    #000000 100%
+  );
+  margin: auto;
+}
+  .submit-heading{
+    width: 697px;
+    height: 126px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 78px;
+    /* identical to box height */
+
+    background: linear-gradient(93.31deg, #234ef3 0%, #c913fc 100.9%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+      .submit-paragraph{
+        text-align: center;
+        line-height: 100px;  
+     }
+  }
+}
+
+// media queries for submit paragraph
+@media screen and (max-width: 767px) {
+  .submit-container{
+   width: 100%;
+   height: 640px;
+   margin: auto;
+   .submit-con{
+    width: 90%;
+    margin: 0px auto;
+  }
+  .submit-heading{
+    width: 360px;
+    font-size: 30px;
+  }
+   }
+  }
