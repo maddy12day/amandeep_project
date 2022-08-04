@@ -20,7 +20,7 @@ const Early = () => {
     mode:"all"
   });
 
-  const[flag,setFlag]=useState(false);
+  const[flag,setFlag]=useState(true);
 
   const onSubmitHandler = (data) => {
     console.log({ data });
