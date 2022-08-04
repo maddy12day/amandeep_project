@@ -2,16 +2,19 @@
 @import "./app/assets/styles/general";
 @import "./app/assets/styles/input";
 
+html, body {margin: 0; height: 100%; overflow: auto}
+
 .con {
   // background: url(../src/app/assets/images/bg.webp);
   // width: 100%;
   // height: 100%;
+  margin-bottom: 100px;
   .profile-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 716px;
-    height: 736px;
+    height: 639px;
     background-size: cover;
     background: linear-gradient(
       180deg,
@@ -19,6 +22,7 @@
       rgba(0, 0, 0, 0.19) 57.49%,
       #000000 100%
     );
+   
     margin: auto;
     .profile-icon {
       width: 28px;
@@ -36,7 +40,7 @@
         font-weight: 300;
         font-size: 64px;
         line-height: 78px;
-        background: linear-gradient(93.31deg, #8e15e4 0%, #f3ea14 100.9%);
+        background: linear-gradient(93.31deg, #234EF3 0%, #C913FC 100.9%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -261,8 +265,8 @@
   text-align: center;
   justify-content: center;
   display: flex;
-  height: 50rem;
-  padding-top: 5rem;
+  height: 46.2rem;
+  padding-top: 1rem;
   padding-bottom: 8rem;
 }
 .sub-main {
@@ -286,7 +290,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 3rem;
-  background: linear-gradient(93.31deg, #8e15e4 0%, #f3ea14 100.9%);
+  background: linear-gradient(93.31deg, #234EF3 0%, #C913FC 100.9%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -766,10 +770,13 @@ input[type="radio"]:checked + label::before {
 }
 
 //Finish page
+.finish-page{
+  margin-bottom: 80px;
+}
 
 .finish-container {
   width: 716px;
-  height: 653px;
+  height: 588px;
   background: linear-gradient(
     180deg,
     rgba(18, 18, 18, 0) 0%,
@@ -786,7 +793,7 @@ input[type="radio"]:checked + label::before {
     font-weight: 400;
     font-size: 64px;
     line-height: 78px;
-    background: linear-gradient(93.31deg, #8e15e4 0%, #f3ea14 100.9%);
+    background: linear-gradient(93.31deg, #234EF3 0%, #C913FC 100.9%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -834,7 +841,7 @@ input[type="radio"]:checked + label::before {
       height: 628px;
       .finish-heading {
         width: 96%;
-        margin-left: 20px;
+        margin-left: 7px;
       }
       .finish-paragraph {
         font-size: 153%;
@@ -942,9 +949,10 @@ input[type="radio"]:checked + label::before {
 
 // early acess page
 .early-main-container{
+  margin-bottom: 63px;
 .early-con {
   width: 716px;
-  height: 653px;
+  height: 604px;
   background: linear-gradient(
     180deg,
     rgba(18, 18, 18, 0) 0%,
@@ -1011,14 +1019,24 @@ input[type="radio"]:checked + label::before {
   .early-input2{
     margin-top: 10%;
   }
+  .early-number{
+    width: 15.2rem;
+    margin-top: 10%;
+    .early-mobile{
+      margin-left: 34%;
+    }
+  }
   .early-input3{
     margin-top: 10%;
   }
  }
 }
 
+
+
 // Submit page
 .submit-container{
+  margin-bottom: 86px;
 .submit-con{
   width: 716px;
   height: 653px;
@@ -1029,6 +1047,9 @@ input[type="radio"]:checked + label::before {
     #000000 100%
   );
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
   .submit-heading{
     width: 697px;

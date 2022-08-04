@@ -20,7 +20,7 @@ const Early = () => {
     mode:"all"
   });
 
-  const[flag,setFlag]=useState(true);
+  const[flag,setFlag]=useState(false);
 
   const onSubmitHandler = (data) => {
     console.log({ data });
@@ -71,7 +71,7 @@ const Early = () => {
               <p className="error1">{errors.email?.message}</p>
             </div>
             <div className="d-flex justify-content-center line early-number">
-              <img src={Icon} alt="Icon" className="mobile-icon" />
+              <img src={Icon} alt="Icon" className="mobile-icon early-mobile" />
               <Controller
                 control={control}
                 name="mobile"

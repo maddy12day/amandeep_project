@@ -110,16 +110,7 @@ const Signup = () => {
                 <button className="btn1" disabled={ watch('code') === undefined || watch('code').length < 6 }>Verify</button>
               </div>
               <div className="para">
-                {errors.code?.message || flag ? (
                   <p className="msg-para"  onClick={() => {navigate("/early-acess")}}>I don't have a invite code</p>
-                ) : (
-                  <div>
-                    <p>
-                      If you don't have invite code you can ask for a
-                      <p>refferal from any current fanClub user</p>
-                    </p>
-                  </div>
-                )}
               </div>
             </form>
           </div>
