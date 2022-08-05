@@ -6,6 +6,7 @@ import MobileVerification from"./views/Onboarding/MobileVerification";
 import { useState } from "react";
 import Finish from "./views/Onboarding/finish";
 import Early from "./views/Onboarding/early-acess";
+import UserProfile from "./views/Onboarding/userProfile";
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/finish" element={<Finish/>}/>
             <Route path="/early-acess" element={<Early/>}/>
+            <Route path="/user-profile" element={<UserProfile/>}/>
           </Routes>
         }
       />

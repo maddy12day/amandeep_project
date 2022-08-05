@@ -2,7 +2,12 @@
 @import "./app/assets/styles/general";
 @import "./app/assets/styles/input";
 
-html, body {margin: 0; height: 100%; overflow: auto}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: auto;
+}
 
 .con {
   // background: url(../src/app/assets/images/bg.webp);
@@ -22,7 +27,7 @@ html, body {margin: 0; height: 100%; overflow: auto}
       rgba(0, 0, 0, 0.19) 57.49%,
       #000000 100%
     );
-   
+
     margin: auto;
     .profile-icon {
       width: 28px;
@@ -40,7 +45,7 @@ html, body {margin: 0; height: 100%; overflow: auto}
         font-weight: 300;
         font-size: 64px;
         line-height: 78px;
-        background: linear-gradient(93.31deg, #234EF3 0%, #C913FC 100.9%);
+        background: linear-gradient(93.31deg, #234ef3 0%, #c913fc 100.9%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -290,7 +295,7 @@ html, body {margin: 0; height: 100%; overflow: auto}
   font-style: normal;
   font-weight: 400;
   font-size: 3rem;
-  background: linear-gradient(93.31deg, #234EF3 0%, #C913FC 100.9%);
+  background: linear-gradient(93.31deg, #234ef3 0%, #c913fc 100.9%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -770,7 +775,7 @@ input[type="radio"]:checked + label::before {
 }
 
 //Finish page
-.finish-page{
+.finish-page {
   margin-bottom: 80px;
 }
 
@@ -793,7 +798,7 @@ input[type="radio"]:checked + label::before {
     font-weight: 400;
     font-size: 64px;
     line-height: 78px;
-    background: linear-gradient(93.31deg, #234EF3 0%, #C913FC 100.9%);
+    background: linear-gradient(93.31deg, #234ef3 0%, #c913fc 100.9%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -948,19 +953,19 @@ input[type="radio"]:checked + label::before {
 }
 
 // early acess page
-.early-main-container{
+.early-main-container {
   margin-bottom: 63px;
-.early-con {
-  width: 716px;
-  height: 604px;
-  background: linear-gradient(
-    180deg,
-    rgba(18, 18, 18, 0) 0%,
-    rgba(0, 0, 0, 0.19) 57.49%,
-    #000000 100%
-  );
-  margin: auto;
-}
+  .early-con {
+    width: 716px;
+    height: 604px;
+    background: linear-gradient(
+      180deg,
+      rgba(18, 18, 18, 0) 0%,
+      rgba(0, 0, 0, 0.19) 57.49%,
+      #000000 100%
+    );
+    margin: auto;
+  }
   .early-heading {
     width: 697px;
     height: 126px;
@@ -979,79 +984,77 @@ input[type="radio"]:checked + label::before {
     text-align: center;
     margin-top: 72px;
   }
-  .early-input2{
+  .early-input2 {
     margin-top: 8%;
   }
-  .early-number{
+  .early-number {
     margin-top: 8%;
     width: 31rem;
   }
-  .early-button{
+  .early-button {
     margin-top: 15%;
-    .early-btn{
+    .early-btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: auto
+      margin: auto;
     }
   }
 }
-  
+
 // media query for early-acess-page
 
 @media screen and (max-width: 767px) {
- .early-main-container{
-  width: 100%;
-  height: 640px;
-  margin: auto;
-  .early-con{
-    width: 90%;
-    margin: 0px auto;
-  }
-  .early-heading{
-    width: 97%;
-    margin: 0px auto;
-    margin-top: 31%;
-  }
-  .early-button{
-    margin-top: 30%;
-  }
-  .early-input2{
-    margin-top: 10%;
-  }
-  .early-number{
-    width: 15.2rem;
-    margin-top: 10%;
-    .early-mobile{
-      margin-left: 34%;
+  .early-main-container {
+    width: 100%;
+    height: 640px;
+    margin: auto;
+    .early-con {
+      width: 90%;
+      margin: 0px auto;
+    }
+    .early-heading {
+      width: 97%;
+      margin: 0px auto;
+      margin-top: 31%;
+    }
+    .early-button {
+      margin-top: 30%;
+    }
+    .early-input2 {
+      margin-top: 10%;
+    }
+    .early-number {
+      width: 15.2rem;
+      margin-top: 10%;
+      .early-mobile {
+        margin-left: 34%;
+      }
+    }
+    .early-input3 {
+      margin-top: 10%;
     }
   }
-  .early-input3{
-    margin-top: 10%;
-  }
- }
 }
-
-
 
 // Submit page
-.submit-container{
+.submit-container {
   margin-bottom: 86px;
-.submit-con{
-  width: 716px;
-  height: 653px;
-  background: linear-gradient(
-    180deg,
-    rgba(18, 18, 18, 0) 0%,
-    rgba(0, 0, 0, 0.19) 57.49%,
-    #000000 100%
-  );
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-  .submit-heading{
+  .submit-con {
+    width: 716px;
+    height: 653px;
+    background: linear-gradient(
+      180deg,
+      rgba(18, 18, 18, 0) 0%,
+      rgba(0, 0, 0, 0.19) 57.49%,
+      #000000 100%
+    );
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .submit-heading {
     width: 697px;
     height: 126px;
     font-family: "Montserrat";
@@ -1066,26 +1069,98 @@ input[type="radio"]:checked + label::before {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-      .submit-paragraph{
-        text-align: center;
-        line-height: 100px;  
-     }
+    .submit-paragraph {
+      text-align: center;
+      line-height: 100px;
+    }
   }
 }
 
 // media queries for submit paragraph
 @media screen and (max-width: 767px) {
-  .submit-container{
-   width: 100%;
-   height: 640px;
-   margin: auto;
-   .submit-con{
-    width: 90%;
-    margin: 0px auto;
+  .submit-container {
+    width: 100%;
+    height: 640px;
+    margin: auto;
+    .submit-con {
+      width: 90%;
+      margin: 0px auto;
+    }
+    .submit-heading {
+      width: 360px;
+      font-size: 30px;
+    }
   }
-  .submit-heading{
-    width: 360px;
-    font-size: 30px;
+}
+
+//user-profile
+
+.user-container {
+  width: 716px;
+  height: 700px;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0) 0%,
+    rgba(0, 0, 0, 0.19) 57.49%,
+    #000000 100%
+  );
+  margin: auto;
+  margin-bottom: 92px;
+  .user-background {
+    .background-image {
+      position: relative;
+    }
   }
-   }
+  .user-image {
+    .user-img {
+      position: absolute;
+      left: 35%;
+      top: 30%;
+    }
   }
+  .user-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+    .socials-user {
+      margin: 2%;
+    }
+  }
+  .user-paragraph {
+    // width: 741px;
+    // height: 54px;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 130%;
+    /* or 18px */
+
+    text-align: center;
+    letter-spacing: -0.272011px;
+
+    color: #4f4d4d;
+    p {
+      margin-bottom: 0px;
+    }
+  }
+  .user-links {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    /* identical to box height, or 21px */
+
+    letter-spacing: -0.272011px;
+
+    color: #f4e900;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 9%;
+    margin-top: 3%;
+    cursor: pointer;
+  }
+}
