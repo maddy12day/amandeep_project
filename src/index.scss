@@ -1097,7 +1097,7 @@ input[type="radio"]:checked + label::before {
 
 .user-container {
   width: 716px;
-  height: 700px;
+  height: 647px;
   background: linear-gradient(
     180deg,
     rgba(18, 18, 18, 0) 0%,
@@ -1141,6 +1141,7 @@ input[type="radio"]:checked + label::before {
     letter-spacing: -0.272011px;
 
     color: #4f4d4d;
+    margin-top: 2%;
     p {
       margin-bottom: 0px;
     }
@@ -1163,4 +1164,70 @@ input[type="radio"]:checked + label::before {
     margin-top: 3%;
     cursor: pointer;
   }
+  .user-media {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid white;
+    width: 588px;
+    height: 44px;
+    margin: auto;
+    border: none;
+    background: #121212;
+    border-radius: 4px;
+    margin-top: 3%;
+    .user-media-img{
+      padding-top: 7px;
+    }
+    .user-media-para {
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 17.5985px;
+      line-height: 130%;
+      /* identical to box height, or 23px */
+
+      text-align: center;
+      letter-spacing: -0.272011px;
+
+      color: #ffffff;
+      padding-top: 8px;
+      padding-left: 10px
+    }
+  }
+}
+
+.user-para{
+  padding-right: 20px;
+}
+.user-image{
+  padding-left: 27px;
+}
+
+
+
+// userprofile conditinal css
+
+.user-social1 {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 8%;
+  margin-left: 7%;
+}
+.socials-user {
+  margin: 2%;
+}
+.user-container1{
+  width: 716px;
+  height: 995px;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0) 0%,
+    rgba(0, 0, 0, 0.19) 57.49%,
+    #000000 100%
+  );
+  margin: auto;
+  margin-bottom: 92px;
+  margin-top: -71px;
 }
