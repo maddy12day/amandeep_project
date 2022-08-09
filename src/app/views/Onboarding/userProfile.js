@@ -1,4 +1,4 @@
-import userBg from '../../assets/images/user-bg.png'
+// import userBg from '../../assets/images/user-bg.png'
 import userImg from "../../assets/images/user-img.png"
 import userInsta from "../../assets/images/insta-user.png"
 import userTwitter from '../../assets/images/twitter-user.png'
@@ -30,11 +30,25 @@ const[flag,setFlag]=useState(true);
     <>
       <div className={`user-container
      ${flag === false ? "user-container1" : ""} `}>
+
+
         <div className="user-background">
-         <img src={userBg} alt="Background"
+         {/* <img src={userBg} alt="Background"
           className='background-image'
-         />
+         /> */}
+         <div className="innerImg">
+          <img src={userImg}  alt="user" className='user-img1'/>
         </div>
+        <div className="user-profile-name">
+          <h4>Donna Schaden</h4>
+          <div className="user-profile-information">
+          <p>Photographer</p>
+          <li>120k Fans</li>
+          </div>
+        </div>
+        </div>
+
+
         {/* <div className='user-image'>
      <img src={userImg}  alt="user"
       className='user-img'
@@ -52,7 +66,7 @@ const[flag,setFlag]=useState(true);
            className='socials-user'
         />
         </div>
-        <div className='user-paragraph'>
+        <div className={flag === false ?'user-paragraph1':'user-paragraph'}>
          <p>
          Hi my name is Donna and I'm a photographer. Some of my favorite hobbies include fitness/health
          </p>
