@@ -14,6 +14,7 @@ body {
   // width: 100%;
   // height: 100%;
   margin-bottom: 100px;
+
   .profile-container {
     display: flex;
     flex-direction: column;
@@ -21,14 +22,13 @@ body {
     width: 716px;
     height: 639px;
     background-size: cover;
-    background: linear-gradient(
-      180deg,
-      rgba(18, 18, 18, 0) 0%,
-      rgba(0, 0, 0, 0.19) 57.49%,
-      #000000 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(18, 18, 18, 0) 0%,
+        rgba(0, 0, 0, 0.19) 57.49%,
+        #000000 100%);
 
     margin: auto;
+
     .profile-icon {
       width: 28px;
       height: 20px;
@@ -36,9 +36,11 @@ body {
       margin-top: 6px;
       margin-left: 9px;
     }
+
     .profile-header {
       margin-top: 28px;
       margin-bottom: 15px;
+
       .profile-heading {
         font-family: "Montserrat";
         font-style: normal;
@@ -56,11 +58,13 @@ body {
         // padding-top: 32px;
         // padding-bottom: 0px;
         margin-bottom: 10px;
+
         h1 {
           margin-top: 6px;
         }
       }
     }
+
     .progress {
       display: flex;
       justify-content: center;
@@ -69,6 +73,7 @@ body {
       // margin-top: -50%;
       // padding-bottom: 20px;
       margin-bottom: 4%;
+
       .progress1 {
         width: 242px;
         height: 4px;
@@ -76,13 +81,16 @@ body {
         border: none;
         margin-left: 3%;
       }
+
       .progress-complete {
         background-color: #a046e0 !important;
       }
     }
+
     .profile-select {
       margin-top: 45px;
     }
+
     .profile-paragraph {
       text-align: center;
       margin-top: 40px;
@@ -94,17 +102,20 @@ body {
       line-height: 33px;
       color: white;
     }
+
     .form-container {
       display: flex;
       align-items: center;
       justify-content: center;
       margin-right: 46px;
+
       form {
         display: flex;
         flex-direction: row;
         margin-right: 10%;
         margin-left: 1.5%;
       }
+
       .form-radio {
         margin: 15px;
         font-family: "Nunito";
@@ -115,6 +126,7 @@ body {
         color: #4f4d4d;
       }
     }
+
     .profile-btn {
       display: flex;
       align-items: center;
@@ -124,6 +136,7 @@ body {
       margin-left: 36%;
       width: 223.94px;
       height: 58px;
+
       button {
         background: #404040;
         border-radius: 45px;
@@ -148,9 +161,11 @@ body {
 // Third step
 .thirdstep-container {
   margin-top: 5%;
+
   .thirdstep-select {
     margin-top: 50px;
   }
+
   .thirdstep-paragraph p {
     text-align: center;
     margin-left: 37%;
@@ -162,6 +177,7 @@ body {
     color: #424242;
     margin-top: 10px;
   }
+
   .thirdstep-paragraph-2 p {
     text-align: center;
     margin-left: 58%;
@@ -174,6 +190,7 @@ body {
     margin-top: 10px;
   }
 }
+
 //
 //
 //
@@ -220,6 +237,7 @@ body {
   font-style: normal;
   font-weight: 700;
 }
+
 .ele:hover {
   color: #ffffff;
 }
@@ -229,6 +247,7 @@ body {
   margin-top: 1rem;
   cursor: pointer;
 }
+
 .custom-contact {
   margin-bottom: 22px;
   font-size: 20px;
@@ -239,13 +258,16 @@ body {
 ==================================== */
 
 @media (min-width: 769px) {
+
   .head,
   .nav {
     display: flex;
   }
+
   .head {
     flex-direction: column;
     align-items: center;
+
     .head {
       width: 80%;
       margin: 0 auto;
@@ -274,6 +296,7 @@ body {
   padding-top: 1rem;
   padding-bottom: 8rem;
 }
+
 .sub-main {
   width: 45rem;
   height: 38rem;
@@ -281,12 +304,10 @@ body {
   justify-content: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background: linear-gradient(
-    180deg,
-    rgba(18, 18, 18, 0) 0%,
-    rgba(0, 0, 0, 0.19) 57.49%,
-    #000000 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(18, 18, 18, 0) 0%,
+      rgba(0, 0, 0, 0.19) 57.49%,
+      #000000 100%);
 }
 
 .title {
@@ -341,26 +362,31 @@ button {
   font-size: 1.5rem;
   text-indent: 6px;
 }
+
 #resend {
   color: #9d9d9d;
   display: flex;
   justify-content: flex-end;
   margin-right: 5.5rem;
 }
+
 #resendlink {
   color: #f4e900;
   display: flex;
   justify-content: flex-end;
   margin-right: 5.5rem;
 }
+
 #arrow {
   margin-bottom: 3rem;
   margin-right: 40rem;
 }
+
 .pargraph-signup {
   margin-top: 3%;
   // margin-left: 8.5%;
 }
+
 .span-signup {
   width: 424px;
   height: 22px;
@@ -375,6 +401,7 @@ button {
 
   color: #f4e900;
 }
+
 .para-signup {
   color: white;
   width: 424px;
@@ -389,19 +416,23 @@ button {
 
   text-align: center;
 }
+
 .code-para {
   margin-right: 70%;
   color: #9d9d9d;
 }
+
 .error {
   color: #9d9d9d;
   display: flex;
 }
+
 #code {
   color: #777676;
   font-size: 1.5rem;
   text-indent: 6px;
 }
+
 .line {
   border-bottom: 1px solid #bebebe;
   width: 30rem;
@@ -422,10 +453,12 @@ button {
   margin-right: 6%;
   cursor: pointer;
 }
+
 .symb {
   margin-bottom: 11px;
   margin-left: 78px;
 }
+
 .frame-icon {
   margin-left: 25%;
 }
@@ -455,6 +488,7 @@ ul {
   margin-bottom: 0px;
   line-height: 40px;
 }
+
 .footer-container {
   padding-left: 99px;
   padding-right: 99px;
@@ -463,6 +497,7 @@ ul {
 .footer-list {
   display: flex;
 }
+
 .footer-btn {
   margin-left: 0px;
 }
@@ -533,15 +568,19 @@ ul {
   width: 492px;
   height: 0px;
 }
+
 .code {
   margin-left: 7px;
 }
+
 .signup-icon {
   margin-left: 7%;
 }
+
 .verify-button {
   margin-right: 6%;
 }
+
 #arrow {
   margin-right: 94%;
 }
@@ -585,11 +624,11 @@ label::after {
   transition: all 0.4s;
 }
 
-input[type="radio"]:checked + label::after {
+input[type="radio"]:checked+label::after {
   background: rgba(160, 70, 224, 1);
 }
 
-input[type="radio"]:checked + label::before {
+input[type="radio"]:checked+label::before {
   border: 2px solid #a046e0;
 }
 
@@ -597,33 +636,41 @@ input[type="radio"]:checked + label::before {
   .con {
     width: 100%;
     margin: auto;
+
     .profile-container {
       width: 89%;
       margin: 0px auto;
+
       .form-container .form-radio {
         font-size: 16px;
       }
+
       .profile-select {
         margin-top: 21px;
       }
+
       .profile-header .profile-heading {
         width: 222px;
         margin-bottom: -17px;
+
         h1 {
           font-size: 23px;
           margin-right: 11px;
         }
       }
+
       .profile-paragraph {
         font-size: 13px;
         margin-right: 20%;
         margin-top: 30px;
       }
+
       .form-container {
         flex-direction: column;
         align-items: start;
         margin-left: 25%;
       }
+
       .profile-btn {
         width: 136px;
         margin-left: 28%;
@@ -631,6 +678,7 @@ input[type="radio"]:checked + label::before {
         margin-top: 26%;
         font-size: 17px;
       }
+
       .progress {
         .progress1 {
           width: 97.5px;
@@ -640,17 +688,20 @@ input[type="radio"]:checked + label::before {
     }
   }
 }
+
 @media screen and (max-width: 767px) {
   .thirdstep-container {
     .thirdstep-paragraph p {
       font-size: 8px;
       margin-top: -9px;
     }
+
     .thirdstep-paragraph-2 p {
       font-size: 8px;
       margin-top: -9px;
     }
   }
+
   .error1 {
     font-size: 10px;
     margin-right: 20px;
@@ -662,50 +713,64 @@ input[type="radio"]:checked + label::before {
     width: 20rem;
     height: 41rem;
   }
+
   .para-signup {
     width: 299px;
     font-size: 13px;
   }
+
   .span-signup {
     font-size: 13px;
   }
+
   .code-para {
     margin-right: 52%;
   }
+
   #code {
     font-size: 16px;
     margin-right: 3px;
   }
+
   .symb {
     margin-right: -5px;
   }
+
   .image-signup {
     width: 288px;
   }
+
   .signup-image {
     width: 95%;
   }
+
   .title {
     font-size: 2.5rem;
     margin: 0px auto;
     margin-bottom: 25%;
   }
+
   #arrow {
     margin-right: 89%;
   }
+
   .para {
     font-size: 12px;
   }
+
   .signup-input {
     width: 305px;
   }
+
   .signup-icon {
     margin-left: 22%;
   }
+
   .verify-button {
     margin-right: 12px;
     margin-top: 18%;
   }
+
   .icon {
     margin: auto;
     display: block;
@@ -721,16 +786,20 @@ input[type="radio"]:checked + label::before {
     padding-left: 0px;
     margin-bottom: -12px;
   }
+
   .footer-btn {
     margin-left: 6px;
     margin-top: 33px;
   }
+
   .social-links {
     margin-top: 22px;
   }
+
   .logo-image {
     margin-left: 8px;
   }
+
   .footer-list {
     display: flex;
     flex-direction: column;
@@ -740,9 +809,11 @@ input[type="radio"]:checked + label::before {
     width: 86%;
     height: 100%;
   }
+
   .nav {
     justify-content: space-between;
   }
+
   .ele {
     font-size: 22px;
     margin-right: 0px;
@@ -750,25 +821,32 @@ input[type="radio"]:checked + label::before {
     margin-left: 0px;
     margin: 0px auto;
   }
+
   .mobile-icon {
     margin-left: 22%;
   }
+
   .otp-icon {
     margin-left: 52px;
     height: 31px;
   }
+
   .arrow-mobile {
     margin-left: 27px;
   }
+
   .line {
     width: 19rem;
   }
+
   .mobile-icon {
     margin-left: 23%;
   }
+
   .frame-icon {
     margin-left: 86px;
   }
+
   #otp {
     font-size: 17px;
   }
@@ -782,13 +860,12 @@ input[type="radio"]:checked + label::before {
 .finish-container {
   width: 716px;
   height: 588px;
-  background: linear-gradient(
-    180deg,
-    rgba(18, 18, 18, 0) 0%,
-    rgba(0, 0, 0, 0.19) 57.49%,
-    #000000 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(18, 18, 18, 0) 0%,
+      rgba(0, 0, 0, 0.19) 57.49%,
+      #000000 100%);
   margin: auto;
+
   .finish-heading {
     text-align: center;
     width: 697px;
@@ -804,6 +881,7 @@ input[type="radio"]:checked + label::before {
     background-clip: text;
     margin-top: 72px;
   }
+
   .finish-paragraph {
     width: 550px;
     height: 37px;
@@ -816,12 +894,14 @@ input[type="radio"]:checked + label::before {
     margin-left: 153px;
     margin-top: 100px;
   }
+
   .finish-image {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2%;
   }
+
   .finish-link {
     display: flex;
     align-items: center;
@@ -830,6 +910,7 @@ input[type="radio"]:checked + label::before {
     width: 170.43px;
     height: 57px;
     margin: 0px auto;
+
     .image-finish {
       margin-right: 10px;
     }
@@ -840,14 +921,17 @@ input[type="radio"]:checked + label::before {
   .finish-page {
     width: 100%;
     margin: auto;
+
     .finish-container {
       width: 95%;
       margin: 0px auto;
       height: 628px;
+
       .finish-heading {
         width: 96%;
         margin-left: 7px;
       }
+
       .finish-paragraph {
         font-size: 153%;
         // margin-left: 27px;
@@ -855,10 +939,12 @@ input[type="radio"]:checked + label::before {
         margin: 0px auto;
         width: 323px;
       }
+
       .finish-link {
         margin-top: 45px;
         display: flex;
         flex-direction: column;
+
         .image2-finish {
           margin-top: 12%;
           margin-right: 7px;
@@ -867,11 +953,13 @@ input[type="radio"]:checked + label::before {
     }
   }
 }
+
 /* Phone Input Style */
 .react-tel-input {
   margin-left: 5px;
   width: auto;
 }
+
 .react-tel-input .form-control {
   background: transparent !important;
   border: none !important;
@@ -886,6 +974,7 @@ input[type="radio"]:checked + label::before {
   background-color: transparent !important;
   border: none !important;
 }
+
 .react-tel-input .flag-dropdown.open {
   background: transparent !important;
 }
@@ -912,12 +1001,15 @@ input[type="radio"]:checked + label::before {
     justify-content: center;
     align-items: center;
   }
+
   .col {
     display: flex;
   }
+
   .footer-btn {
     margin-bottom: 3px;
   }
+
   ul {
     white-space: nowrap;
     list-style: none;
@@ -925,28 +1017,36 @@ input[type="radio"]:checked + label::before {
     margin-bottom: 0px;
     margin-left: 86px;
   }
+
   .finish-heading {
     margin-left: 20px;
   }
+
   .logo-image {
     margin-right: 100px;
   }
+
   .icon {
     margin: auto;
     display: block;
   }
+
   .custom-contact {
     margin: 0px auto;
   }
+
   .social-links {
     margin-top: 35px;
   }
+
   .sub-main {
     height: 41rem;
   }
+
   .title {
     margin-left: 42px;
   }
+
   .para {
     font-size: 21px;
   }
@@ -955,17 +1055,17 @@ input[type="radio"]:checked + label::before {
 // early acess page
 .early-main-container {
   margin-bottom: 63px;
+
   .early-con {
     width: 716px;
     height: 604px;
-    background: linear-gradient(
-      180deg,
-      rgba(18, 18, 18, 0) 0%,
-      rgba(0, 0, 0, 0.19) 57.49%,
-      #000000 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(18, 18, 18, 0) 0%,
+        rgba(0, 0, 0, 0.19) 57.49%,
+        #000000 100%);
     margin: auto;
   }
+
   .early-heading {
     width: 697px;
     height: 126px;
@@ -984,15 +1084,19 @@ input[type="radio"]:checked + label::before {
     text-align: center;
     margin-top: 72px;
   }
+
   .early-input2 {
     margin-top: 8%;
   }
+
   .early-number {
     margin-top: 8%;
     width: 31rem;
   }
+
   .early-button {
     margin-top: 15%;
+
     .early-btn {
       display: flex;
       align-items: center;
@@ -1009,28 +1113,35 @@ input[type="radio"]:checked + label::before {
     width: 100%;
     height: 640px;
     margin: auto;
+
     .early-con {
       width: 90%;
       margin: 0px auto;
     }
+
     .early-heading {
       width: 97%;
       margin: 0px auto;
       margin-top: 31%;
     }
+
     .early-button {
       margin-top: 30%;
     }
+
     .early-input2 {
       margin-top: 10%;
     }
+
     .early-number {
       width: 15.2rem;
       margin-top: 10%;
+
       .early-mobile {
         margin-left: 34%;
       }
     }
+
     .early-input3 {
       margin-top: 10%;
     }
@@ -1040,20 +1151,20 @@ input[type="radio"]:checked + label::before {
 // Submit page
 .submit-container {
   margin-bottom: 86px;
+
   .submit-con {
     width: 716px;
     height: 653px;
-    background: linear-gradient(
-      180deg,
-      rgba(18, 18, 18, 0) 0%,
-      rgba(0, 0, 0, 0.19) 57.49%,
-      #000000 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(18, 18, 18, 0) 0%,
+        rgba(0, 0, 0, 0.19) 57.49%,
+        #000000 100%);
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .submit-heading {
     width: 697px;
     height: 126px;
@@ -1069,6 +1180,7 @@ input[type="radio"]:checked + label::before {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+
     .submit-paragraph {
       text-align: center;
       line-height: 100px;
@@ -1082,10 +1194,12 @@ input[type="radio"]:checked + label::before {
     width: 100%;
     height: 640px;
     margin: auto;
+
     .submit-con {
       width: 90%;
       margin: 0px auto;
     }
+
     .submit-heading {
       width: 360px;
       font-size: 30px;
@@ -1098,35 +1212,51 @@ input[type="radio"]:checked + label::before {
 .user-container {
   width: 716px;
   height: 647px;
-  background: linear-gradient(
-    180deg,
-    rgba(18, 18, 18, 0) 0%,
-    rgba(0, 0, 0, 0.19) 57.49%,
-    #000000 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(18, 18, 18, 0) 0%,
+      rgba(0, 0, 0, 0.19) 57.49%,
+      #000000 100%);
   margin: auto;
   margin-bottom: 92px;
+
   .user-background {
-    .background-image {
-      position: relative;
+    background-image: url('./app/assets/images/user-bg.png');
+    background-repeat: no-repeat;
+    display: flex;
+
+    .user-profile-name {
+      margin-top: 18%;
+      margin-left: 2%;
+      color: white;
+      font-weight: 700;
+      line-height: 10px;
+
+      .user-profile-information {
+        display: flex;
+        width: 210px;
+        justify-content: space-between;
+        font-weight: 300;
+      }
+    }
+
+    .innerImg {
+      display: inline-block;
+      margin-top: 12%;
+      margin-left: 5%;
     }
   }
-  .user-image {
-    .user-img {
-      position: absolute;
-      left: 35%;
-      top: 30%;
-    }
-  }
+
   .user-social {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 8%;
+    margin-top: 5%;
+
     .socials-user {
       margin: 2%;
     }
   }
+
   .user-paragraph {
     // width: 741px;
     // height: 54px;
@@ -1142,10 +1272,12 @@ input[type="radio"]:checked + label::before {
 
     color: #4f4d4d;
     margin-top: 2%;
+
     p {
       margin-bottom: 0px;
     }
   }
+
   .user-links {
     font-family: "Nunito";
     font-style: normal;
@@ -1164,6 +1296,7 @@ input[type="radio"]:checked + label::before {
     margin-top: 3%;
     cursor: pointer;
   }
+
   .user-media {
     display: flex;
     justify-content: center;
@@ -1176,9 +1309,11 @@ input[type="radio"]:checked + label::before {
     background: #121212;
     border-radius: 4px;
     margin-top: 3%;
-    .user-media-img{
+
+    .user-media-img {
       padding-top: 7px;
     }
+
     .user-media-para {
       font-family: "Nunito";
       font-style: normal;
@@ -1197,10 +1332,11 @@ input[type="radio"]:checked + label::before {
   }
 }
 
-.user-para{
+.user-para {
   padding-right: 20px;
 }
-.user-image{
+
+.user-image {
   padding-left: 27px;
 }
 
@@ -1215,19 +1351,31 @@ input[type="radio"]:checked + label::before {
   margin-top: 8%;
   margin-left: 7%;
 }
+
 .socials-user {
   margin: 2%;
 }
-.user-container1{
+
+.user-container1 {
   width: 716px;
-  height: 995px;
-  background: linear-gradient(
-    180deg,
-    rgba(18, 18, 18, 0) 0%,
-    rgba(0, 0, 0, 0.19) 57.49%,
-    #000000 100%
-  );
+  height: 970px;
+  background: linear-gradient(180deg,
+      rgba(18, 18, 18, 0) 0%,
+      rgba(0, 0, 0, 0.19) 57.49%,
+      #000000 100%);
   margin: auto;
   margin-bottom: 92px;
   margin-top: -71px;
+}
+
+.user-paragraph1 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18%;
+  letter-spacing: -0.272011px;
+  color: #4f4d4d;
+  margin-top: 2%;
+  padding-left: 60px;
 }
